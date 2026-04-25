@@ -354,7 +354,6 @@
       '      <div class="footer-link-list">' +
       '        <a href="about.html">About Brand</a>' +
       '        <a href="contact.html">Contact & Enquiry</a>' +
-      '        <a href="admin-login.html">Admin Dashboard</a>' +
       '        <a href="' + DATA.buildPhoneLink(DATA.siteConfig.phone) + '">Call Now</a>' +
       "      </div>" +
       "    </div>" +

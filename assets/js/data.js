@@ -381,26 +381,105 @@
     }
   };
 
-  var priceBase = {
-    "outdoor-sofa": 52999,
-    "coffee-sets": 24999,
-    "dining-sets": 44999,
-    swings: 21999,
-    loungers: 18999,
-    sunbeds: 25999,
-    umbrellas: 9999,
-    "bar-sets": 28999
-  };
+  // --- SIMPLE PRICE LIST (Change prices here) ---
+  var PRODUCT_PRICES = {
+    // Outdoor Sofas
+    "Haven": 52799,
+    "Vista": 200,
+    "Meadow": 59399,
+    "Horizon": 62599,
+    "Cascade": 65799,
+    "Alipine": 68999,
+    "Solstice": 72199,
+    "Breeze": 75399,
+    "Ember": 78599,
+    "Enden": 81799,
+    "Skyline": 84999,
+    "Summit": 88199,
 
-  var priceStep = {
-    "outdoor-sofa": 3200,
-    "coffee-sets": 1800,
-    "dining-sets": 2400,
-    swings: 1400,
-    loungers: 1200,
-    sunbeds: 1600,
-    umbrellas: 600,
-    "bar-sets": 1900
+    // Coffee Sets
+    "Ivan": 24999,
+    "WW-09 (2 chair + 1 table)": 26799,
+    "Qube": 28599,
+    "WW-05 (2 chair + 1 table)": 30399,
+    "WW-08 (2 Chair + 1 table)": 32199,
+    "Wave": 33999,
+    "Cairo": 35799,
+    "WW-43 (2 chair + 1 table)": 37599,
+    "Nest": 39399,
+    "WW-12 ( 2 Chair + 1 table)": 41199,
+    "WW-12 (2 Chair +1 table)": 42999,
+    "Egg": 44799,
+
+    // Dining Sets
+    "WW-44 (4 chair + 1 table)": 44999,
+    "WW-69 (4 chair + 1 table)": 47399,
+    "WW-57 (4 chair + 1 table)": 49799,
+    "WW-08B (4 chair + 1 table)": 52199,
+    "WW-50 (4 chair + 1 table)": 54599,
+    "WW-26 with arm (4 chair + 1 table)": 56999,
+    "WW-43 (4 chair + 1 table)": 59399,
+    "WW-26 without arm (4 chair + 1 table)": 61799,
+    "WW-08 (4 chair + 1 table)": 64199,
+    "WW-12 (4 chair + 1 table)": 66599,
+    "WW-12 (4 chair + 1 table)s": 68999,
+    "WW-63 (4 chair + 1 table)": 71399,
+    "WW-43 (6 chair + 1 table)r": 73799,
+    "WW-26 (6 chair + 1 table)": 76199,
+    "WW-43 (6 chair + 1 table)s": 78599,
+    "WW-43 Net (6 chair + 1 table)": 80999,
+    "WW-09 (4 chair + 1 table)": 83399,
+    "WW-15 (4 chair + 1 table)": 85799,
+
+    // Swings
+    "Spoon": 21999,
+    "Celestial -01": 23399,
+    "Spider": 24799,
+    "Celestial -02": 26199,
+    "Sway": 27599,
+    "Double Seater-01": 28999,
+    "Double Seater-02": 30399,
+    "Vortex": 31799,
+    "Knight": 33199,
+    "Avocado": 34599,
+    "Melody": 35999,
+    "Glide": 37399,
+    "Spider HR": 38799,
+    "Saturn": 40199,
+
+    // Loungers
+    "Bean": 18999,
+    "Melt": 20199,
+    "Fuse": 21399,
+    "Curve": 22599,
+    "Zen": 23799,
+    "Plush": 24999,
+
+    // Sunbeds
+    "Glade": 25999,
+    "Oasis": 27599,
+    "Echo": 29199,
+    "Bloom": 30799,
+
+    // Umbrellas
+    "WW- U3 (Green)": 9999,
+    "WW- U1 (Beige)": 10599,
+    "WW - U1 (Maroon)": 11199,
+    "WW- U2 (Green)": 11799,
+
+    // Bar Sets
+    "Riveria": 28999,
+    "Brew-02": 30899,
+    "Brew-01": 32799,
+    "Bubble": 34699,
+    "Martini": 36599,
+    "Noble": 38499,
+    "Pacific": 40399,
+    "Bistro": 42299,
+    "Serving Cart-01": 44199,
+    "Autumn": 46099,
+    "Vatican": 47999,
+    "Canvas": 49899
   };
 
   var categories = categoryBlueprints.map(function (category, index) {
@@ -439,7 +518,11 @@
 
     productFiles[categorySlug].forEach(function (fileName, index) {
       var displayName = cleanProductName(fileName);
-      var price = priceBase[categorySlug] + priceStep[categorySlug] * index;
+
+      // LOOKUP PRICE FROM THE SIMPLE LIST
+      // Fallback logic if a new name is added but not in the price list
+      var price = PRODUCT_PRICES[displayName] || 0;
+
       var originalPrice = Math.round(price * 1.22);
       var discountPercentage = Math.round(((originalPrice - price) / originalPrice) * 100);
       var rating = Number((4.3 + (index % 5) * 0.12).toFixed(1));
