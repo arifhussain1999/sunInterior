@@ -2853,3 +2853,167 @@ body {
 
   color: transparent !important; /* VERY IMPORTANT */
 }
+
+/* mobile 2 column */
+@media (max-width: 768px) {
+  .grid-4,
+  .grid-3,
+  .grid-2 {
+    grid-template-columns: repeat(2, 1fr) !important;
+  }
+
+  .grid {
+    gap: 12px;
+  }
+}
+
+/* FIX IMAGE CUT ISSUE */
+.category-card-media {
+  aspect-ratio: 1 / 1 !important;
+  min-height: unset !important;
+  --category-image-scale: 1 !important;
+}
+
+.category-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain !important;
+  object-position: center;
+  transform: scale(1) !important;
+}
+
+/* CARD BASE */
+.premium-card {
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.premium-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+/* IMAGE */
+.category-card-media {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+
+.category-card-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.4s ease;
+}
+
+.premium-card:hover .category-card-image {
+  transform: scale(1.05);
+}
+
+/* PREMIUM BADGE */
+.premium-badge {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+
+  padding: 6px 12px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+
+  color: #fff;
+  background: linear-gradient(135deg, #8b5e3c, #c8a27a);
+
+  border-radius: 999px;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+
+  backdrop-filter: blur(6px);
+
+  z-index: 2; /* IMPORTANT */
+}
+.premium-badge {
+  text-transform: uppercase;
+  font-size: 10px;
+  letter-spacing: 0.6px;
+}
+
+
+/* BODY */
+.category-card-body {
+  padding: 16px;
+}
+
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.card-copy {
+  font-size: 13px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* FOOTER */
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+}
+
+.product-count {
+  font-size: 13px;
+  font-weight: 500;
+  color: #333;
+}
+
+.card-cta {
+  font-size: 13px;
+  font-weight: 600;
+  color: #8b5e3c;
+  transition: 0.2s;
+}
+
+.premium-card:hover .card-cta {
+  transform: translateX(4px);
+}
+.category-card-media {
+  position: relative;
+  padding: 14px; /* 👈 THIS is key */
+}
+
+@media (max-width: 768px) {
+  .premium-badge {
+    top: 10px;
+    left: 10px;
+
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+}
+
+.badge-top {
+  background: linear-gradient(135deg, #b45309, #f59e0b);
+}
+
+.badge-luxury {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+.badge-outdoor-sofa {
+  background: linear-gradient(135deg, #b45309, #f59e0b);
+}
+
+.badge-coffee-sets {
+  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}

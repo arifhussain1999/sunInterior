@@ -524,37 +524,41 @@
   }
 
   function categoryCardMarkup(category, count) {
-    var mediaStyle =
-      "background:" +
-      (category.cardMediaBackground ||
-        ("linear-gradient(135deg," +
-          category.accentFrom +
-          " 0%," +
-          category.accentTo +
-          " 100%)")) +
-      ";" +
-      (category.cardImageFit ? "--category-image-fit:" + String(category.cardImageFit) + ";" : "") +
-      (category.cardImageScale ? "--category-image-scale:" + String(category.cardImageScale) + ";" : "");
+  var mediaStyle =
+    "background:" +
+    (category.cardMediaBackground ||
+      ("linear-gradient(135deg," +
+        category.accentFrom +
+        " 0%," +
+        category.accentTo +
+        " 100%)")) +
+    ";" +
+    "--category-image-fit:contain;" +
+    "--category-image-scale:1;";
 
-    return (
-      '<a class="surface card category-card" href="' + DATA.categoryUrl(category.slug) + '">' +
-      '  <div class="category-card-media" style="' + mediaStyle + '">' +
-      '    <img class="category-card-image" src="' + category.bannerImage + '" alt="' + escapeHtml(category.name) + '">' +
-      "  </div>" +
-      '  <div class="category-card-body">' +
-      '    <div class="split-row">' +
-      '      <h3 class="card-title" style="margin-top:0;font-size:24px;">' + escapeHtml(category.name) + "</h3>" +
-      '      <span class="badge badge-blue">' + escapeHtml(category.badge) + "</span>" +
-      "    </div>" +
-      '    <p class="card-copy">' + escapeHtml(category.description) + "</p>" +
-      '    <div class="split-row" style="margin-top:14px;">' +
-      '      <strong>' + String(count || 0) + " products</strong>" +
-      '      <span class="eyebrow" style="margin:0;">Shop Now</span>' +
-      "    </div>" +
-      "  </div>" +
-      "</a>"
-    );
-  }
+  return (
+    '<a class="category-card premium-card" href="' + DATA.categoryUrl(category.slug) + '">' +
+
+    // IMAGE
+    '  <div class="category-card-media" style="' + mediaStyle + '">' +
+    '    <img class="category-card-image" src="' + category.bannerImage + '" alt="' + escapeHtml(category.name) + '">' +
+    '    <span class="premium-badge badge-' + category.slug + '">' + escapeHtml(category.badge) + '</span>' +
+    "  </div>" +
+
+    // BODY
+    '  <div class="category-card-body">' +
+    '    <h3 class="card-title">' + escapeHtml(category.name) + "</h3>" +
+    '    <p class="card-copy">' + escapeHtml(category.description || "") + "</p>" +
+
+    '    <div class="card-footer">' +
+    '      <span class="product-count">' + String(count || 0) + " products</span>" +
+    '      <span class="card-cta">Explore →</span>' +
+    "    </div>" +
+    "  </div>" +
+
+    "</a>"
+  );
+}
 
   function enquiryFormMarkup(options) {
     var message = options.message || "";

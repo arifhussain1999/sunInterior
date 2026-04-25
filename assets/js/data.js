@@ -152,14 +152,12 @@
       name: "Outdoor Sofa",
       slug: "outdoor-sofa",
       folder: "Sofa Sets",
-      description:
-        "Signature all-weather sofa sets designed for terraces, lawns and premium outdoor lounges.",
       bannerImage: assetPath("Sofa Sets", "Haven.png"),
       accentFrom: "#2874F0",
       accentTo: "#00C6FF",
       badge: "Top Seller",
       cardImageFit: "contain",
-      cardImageScale: 1.02,
+      cardImageScale: 1,
       order: 1,
       heroStat: "48-hour quote turnaround"
     },
@@ -167,8 +165,6 @@
       name: "Coffee Sets",
       slug: "coffee-sets",
       folder: "Coffee Sets",
-      description:
-        "Compact conversation sets curated for balconies, patios and hospitality corners.",
       bannerImage: assetPath("Coffee Sets", "Ivan.png"),
       accentFrom: "#0F4C81",
       accentTo: "#38BDF8",
@@ -180,8 +176,6 @@
       name: "Dining Sets",
       slug: "dining-sets",
       folder: "Dining Sets",
-      description:
-        "Premium outdoor dining collections crafted for family gatherings and resort projects.",
       bannerImage: assetPath("Dining Sets", "WW-44 (4 chair + 1 table).png"),
       accentFrom: "#1F2937",
       accentTo: "#2874F0",
@@ -193,14 +187,12 @@
       name: "Hanging Swings",
       slug: "swings",
       folder: "Swings",
-      description:
-        "Statement wicker swings that create a sculptural lounge moment indoors or outdoors.",
       bannerImage: assetPath("Swings", "Saturn.png"),
       accentFrom: "#243B53",
       accentTo: "#0EA5E9",
       badge: "Statement Design",
       cardImageFit: "contain",
-      cardImageScale: 0.82,
+      cardImageScale: 1,
       cardMediaBackground: "linear-gradient(180deg, #fffdf9 0%, #f6efe6 100%)",
       order: 4,
       heroStat: "Designer silhouettes"
@@ -209,8 +201,6 @@
       name: "Loungers",
       slug: "loungers",
       folder: "Loungers",
-      description:
-        "Sun-chasing loungers with plush comfort, easy maintenance and hotel-grade detailing.",
       bannerImage: assetPath("Loungers", "Zen.png"),
       accentFrom: "#14532D",
       accentTo: "#10B981",
@@ -222,8 +212,6 @@
       name: "Sunbeds",
       slug: "sunbeds",
       folder: "Sunbeds",
-      description:
-        "Long-form relaxation pieces designed for rooftops, poolsides and luxury staycations.",
       bannerImage: assetPath("Sunbeds", "Glade.png"),
       accentFrom: "#92400E",
       accentTo: "#F59E0B",
@@ -235,8 +223,6 @@
       name: "Umbrellas",
       slug: "umbrellas",
       folder: "Umbrella",
-      description:
-        "High coverage outdoor umbrellas built to complete shaded dining and lounge spaces.",
       bannerImage: assetPath("Umbrella", "WW- U1 (Beige).png"),
       accentFrom: "#7C2D12",
       accentTo: "#FB923C",
@@ -248,14 +234,12 @@
       name: "Bar Sets",
       slug: "bar-sets",
       folder: "Bar Sets",
-      description:
-        "Entertaining-focused bar furniture for terraces, clubhouses, rooftops and cafes.",
       bannerImage: assetPath("Bar Sets", "Martini.png"),
       accentFrom: "#312E81",
       accentTo: "#60A5FA",
       badge: "Entertainer Edit",
       cardImageFit: "contain",
-      cardImageScale: 1.1,
+      cardImageScale: 1,
       cardMediaBackground: "linear-gradient(180deg, #fffdf9 0%, #f6efe6 100%)",
       order: 8,
       heroStat: "Commercial friendly"
