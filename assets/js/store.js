@@ -7,6 +7,7 @@
     enquiries: "ww_enquiries",
     banners: "ww_custom_banners",
     blogPosts: "ww_custom_blog_posts",
+    priceOverrides: "ww_price_overrides",
     adminSession: "ww_admin_session"
   };
 
@@ -191,7 +192,21 @@
   function getProducts() {
     var categories = getCategories();
     var custom = read(STORAGE_KEYS.products, []);
-    return DATA.products.concat(
+    var overrides = read(STORAGE_KEYS.priceOverrides, {});
+
+    var seedProducts = DATA.products.map(function (product) {
+      if (overrides[product.id]) {
+        var newPrice = toNumber(overrides[product.id]);
+        return Object.assign({}, product, {
+          price: newPrice,
+          originalPrice: Math.round(newPrice * 1.22),
+          discountPercentage: Math.round(((Math.round(newPrice * 1.22) - newPrice) / Math.round(newPrice * 1.22)) * 100)
+        });
+      }
+      return product;
+    });
+
+    return seedProducts.concat(
       custom.map(function (item) {
         return normalizeCustomProduct(item, categories);
       })
@@ -542,6 +557,13 @@
     return isValid;
   }
 
+  function savePriceOverride(productId, price) {
+    var overrides = read(STORAGE_KEYS.priceOverrides, {});
+    overrides[productId] = toNumber(price);
+    write(STORAGE_KEYS.priceOverrides, overrides);
+    return overrides;
+  }
+
   function logout() {
     window.localStorage.removeItem(STORAGE_KEYS.adminSession);
   }
@@ -574,6 +596,7 @@
     deleteBanner: deleteBanner,
     saveBlogPost: saveBlogPost,
     deleteBlogPost: deleteBlogPost,
+    savePriceOverride: savePriceOverride,
     login: login,
     logout: logout,
     isLoggedIn: isLoggedIn

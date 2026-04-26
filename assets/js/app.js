@@ -354,14 +354,14 @@
       '      <div class="footer-link-list">' +
       '        <a href="about.html">About Brand</a>' +
       '        <a href="contact.html">Contact & Enquiry</a>' +
-      '        <a href="admin-login.html">Admin Dashboard</a>' +
       '        <a href="' + DATA.buildPhoneLink(DATA.siteConfig.phone) + '">Call Now</a>' +
       "      </div>" +
       "    </div>" +
       "  </div>" +
       '  <div class="container footer-bottom">' +
-      '    <span class="footer-meta">© 2026 SUN SEATINGS. Built for luxury catalogue selling.</span>' +
-      "  </div>" +
+'  <span class="footer-meta">© 2026 SUN SEATINGS. Built for luxury catalogue selling.</span>' +
+'  <span class="footer-credit">Built by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a> - Web Design Agency</span>' +
+"</div>" +
       "</footer>";
   }
 
@@ -1527,7 +1527,14 @@
     setMeta("About | SUN SEATINGS", "Learn about the SUN SEATINGS brand, luxury positioning and quotation-first customer experience.");
     content.innerHTML =
       '<section class="section"><div class="container"><div class="two-col">' +
-      '  <div class="surface card"><p class="eyebrow">About Brand</p><h1 class="section-title">A luxury outdoor brand built for modern Indian spaces.</h1><p class="section-subtitle">SUN SEATINGS blends premium catalogue merchandising with personal quotation support. The site is designed to feel familiar to shoppers used to Flipkart, Amazon and Meesho, while elevating the brand with a cleaner, more luxurious finish.</p></div>' +
+      '  <div class="surface card">' +
+'    <p class="eyebrow">About Brand</p>' +
+'    <h1 class="section-title">A luxury outdoor brand built for modern Indian spaces.</h1>' +
+'    <p class="section-subtitle">SUN SEATINGS blends premium catalogue merchandising with personal quotation support. The site is designed to feel familiar to shoppers used to Flipkart, Amazon and Meesho, while elevating the brand with a cleaner, more luxurious finish.</p>' +
+
+'    <p class="credit-line">Website designed by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a>, a digital experience studio.</p>' +
+
+'  </div>' +
       '  <div class="surface card"><div class="grid grid-2">' +
       [
         ["Luxury-first", "Elevated brand expression with high-conversion ecommerce patterns."],
@@ -1555,9 +1562,12 @@
       contactCard("Studio", DATA.siteConfig.address, "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(DATA.siteConfig.address), true) +
       "      </div>" +
       enquiryFormMarkup({ type: "general", title: "General enquiry form" }) +
-      "    </div>" +
-      "  </div>" +
-      "</section>";
+
+'  <p class="credit-line" style="margin-top:20px;">Website by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a></p>' +
+
+"    </div>" +
+"  </div>" +
+"</section>";
     bindEnquiryForms(content);
   }
 

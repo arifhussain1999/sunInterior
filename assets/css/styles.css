@@ -2932,8 +2932,6 @@ body {
   color: #fff;
   background: linear-gradient(135deg, #8b5e3c, #c8a27a);
 
-  border-radius: 999px;
-
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 
   backdrop-filter: blur(6px);
@@ -3016,4 +3014,108 @@ body {
 
 .badge-coffee-sets {
   background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+}
+
+/* credit of nexvora */
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap; /* mobile fix */
+}
+
+.footer-credit {
+  font-size: 12px;
+  color: rgba(255,255,255,0.6);
+}
+
+.footer-credit a {
+  color: rgba(255,255,255,0.85);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-credit a:hover {
+  color: #c8a27a;
+}
+
+
+/* FIX FLOATING BUTTONS */
+.floating-stack {
+  position: fixed;
+  right: 14px;
+  bottom: 110px; /* pushes it above footer */
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 50;
+}
+
+.floating-button {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  font-size: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+/* SCROLL BUTTON smaller */
+.floating-button.is-top {
+  width: 48px;
+  height: 48px;
+  font-size: 20px;
+}
+
+@media (max-width: 768px) {
+  .floating-stack {
+    bottom: 95px;
+    right: 10px;
+  }
+
+  .floating-button {
+    width: 38px;
+    height: 38px;
+    font-size: 16px;
+  }
+
+  .floating-button.is-top {
+    width: 44px;
+    height: 44px;
+  }
+}
+
+.credit-line {
+  font-size: 12px;
+  color: #888;
+  margin-top: 16px;
+}
+
+.credit-line a {
+  color: #8b5e3c;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.credit-line a:hover {
+  text-decoration: underline;
+}
+
+.credit-line {
+  font-size: 12px;
+  color: #888;
+}
+
+.credit-line a {
+  color: #8b5e3c;
+  text-decoration: none;
+}
+
+.credit-line a:hover {
+  text-decoration: underline;
 }
