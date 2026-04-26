@@ -1424,6 +1424,7 @@ button {
   transition: transform 0.3s ease;
 }
 
+
 .product-card:hover .product-card-media img {
   transform: scale(1.05);
 }
@@ -2937,7 +2938,7 @@ button {
   transform: scale(1.05);
 }
 
-/* PREMIUM BADGE */
+/* ================= PREMIUM BADGE (UPGRADED) ================= */
 .premium-badge {
   position: absolute;
   top: 12px;
@@ -2946,28 +2947,31 @@ button {
   padding: 6px 12px;
   font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
 
-  color: #1f1812;
-  background: #f1e2cb;
-  border: 1px solid rgba(139, 115, 85, 0.2);
+  color: #fff;
+  background: linear-gradient(135deg, #8b5e3c, #c8a27a);
 
   border-radius: 999px;
-
   box-shadow: 0 6px 18px rgba(0,0,0,0.18);
 
   backdrop-filter: blur(6px);
+  z-index: 3;
 
-  z-index: 2; /* IMPORTANT */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  white-space: nowrap;
 }
-.premium-badge {
-  text-transform: uppercase;
-  font-size: 10px;
-  letter-spacing: 0.6px;
+
+/* ================= CATEGORY CARD IMAGE FIX ================= */
+.category-card-media {
+  position: relative; /* IMPORTANT for badge */
 }
 
-
-/* BODY */
+/* ================= BODY ================= */
 .category-card-body {
   padding: 16px;
 }
@@ -2982,6 +2986,32 @@ button {
   font-size: 13px;
   color: #666;
   line-height: 1.4;
+}
+
+/* ================= MOBILE OPTIMIZATION ================= */
+@media (max-width: 768px) {
+  .premium-badge {
+    top: 8px;
+    left: 8px;
+
+    padding: 4px 10px;
+    font-size: 9px;
+    letter-spacing: 0.4px;
+
+    border-radius: 20px;
+  }
+
+  .category-card-body {
+    padding: 12px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+  .card-copy {
+    font-size: 12px;
+  }
 }
 
 /* FOOTER */
@@ -3134,3 +3164,41 @@ button {
 .credit-line a:hover {
   text-decoration: underline;
 }
+
+/*2/2*/
+@media (max-width: 768px) {
+
+  /* GRID FIX */
+  #shop-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 12px;
+  }
+
+  /* CARD FIX */
+  .product-card {
+    width: 100% !important;
+    min-width: 0 !important;
+  }
+
+  /* 🔥 MAIN FIX — REMOVE ALL HEIGHT CONTROL */
+  .product-card-media {
+    height: auto !important;
+    min-height: unset !important;
+    max-height: none !important;
+
+    aspect-ratio: 1 / 1 !important;
+
+    display: block !important;
+  }
+
+  /* IMAGE */
+  .product-card-media img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important;
+    padding: 10px !important;
+  }
+
+}
+
