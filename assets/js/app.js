@@ -820,31 +820,30 @@
       '<section class="section">' +
       '  <div class="container">' +
       '    <div class="section-heading"><p class="eyebrow">Category Grid</p><h2 class="section-title">Find the perfect pieces for your space.</h2></div>' +
-      '    <div class="grid grid-3">' +
+      '    <div class="grid grid-4">' +
       categories
         .map(function (category) {
-          return categoryCardMarkup(category, counts[category.slug] || 0);
-        })
-        .join("") +
-      "    </div>" +
-      "  </div>" +
-      "</section>" +
-      '<section class="section">' +
-      '  <div class="container">' +
-      '    <div class="split-row section-heading">' +
-      '      <div><p class="eyebrow">Featured products</p><h2 class="section-title">Trending catalog pieces that feel marketplace-ready.</h2></div>' +
-      '      <div class="carousel-controls"><button class="circle-button" type="button" id="featured-prev">←</button><button class="circle-button" type="button" id="featured-next">→</button></div>' +
-      "    </div>" +
-      '    <div class="featured-track" id="featured-track">' +
-      featuredProducts.map(productCardMarkup).join("") +
-      "    </div>" +
-      "  </div>" +
-      "</section>" +
-      '<section class="section">' +
-      '  <div class="container surface card">' +
-      '    <div class="section-heading"><p class="eyebrow">Why Choose Us</p><h2 class="section-title">Trust signals built to convert catalogue visits into enquiries.</h2></div>' +
-      '    <div class="trust-grid">' +
-      DATA.trustPoints
+  return categoryCardMarkup(category, counts[category.slug] || 0);
+})
+.join("") +
+"    </div>" +
+"  </div>" +
+"</section>" +
+'<section class="section">' +
+'  <div class="container">' +
+'    <div class="split-row section-heading">' +
+'      <div><p class="eyebrow">Featured products</p><h2 class="section-title">Trending catalog pieces that feel marketplace-ready.</h2></div>' +
+"    </div>" +
+'    <div class="featured-track" id="featured-track">' +
+featuredProducts.map(productCardMarkup).join("") +
+"    </div>" +
+"  </div>" +
+"</section>" +
+'<section class="section">' +
+'  <div class="container surface card">' +
+'    <div class="section-heading"><p class="eyebrow">Why Choose Us</p><h2 class="section-title">Trust signals built to convert catalogue visits into enquiries.</h2></div>' +
+'    <div class="trust-grid">' +
+DATA.trustPoints
         .map(function (point) {
           return (
             '<div class="trust-card">' +
@@ -1074,7 +1073,7 @@
 
     function renderShopFilters() {
       return (
-        '<div class="split-row"><div><p class="card-title" style="margin:0;font-size:28px;">Filter products</p></div><span class="badge badge-blue">Smart filters</span></div>' +
+        '<div class="split-row"><div><p class="card-title" style="margin:0;font-size:28px;">Filter products</p><p class="card-copy">Flipkart-style browsing controls</p></div><span class="badge badge-blue">Smart filters</span></div>' +
         '      <div class="toolbar-actions" style="margin-top:18px;"><button class="btn btn-outline" data-clear-filters type="button">Reset Filters</button></div>' +
         renderFilterGroup("Category", ["all"].concat(categories.map(function (category) { return category.slug; })), state.category, "category", function (slug) {
           return slug === "all"
@@ -1337,7 +1336,7 @@
       '    <div class="surface page-hero"><p class="eyebrow">Categories</p><h1 class="section-title">Browse the SUN SEATINGS collection by furniture type.</h1></div>' +
       '  </div>' +
       "</section>" +
-      '<section class="section" style="padding-top:0;"><div class="container"><div class="grid grid-3">' +
+      '<section class="section" style="padding-top:0;"><div class="container"><div class="grid grid-4">' +
       categories
         .map(function (category) {
           return categoryCardMarkup(category, counts[category.slug] || 0);
