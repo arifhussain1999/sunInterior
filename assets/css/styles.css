@@ -2948,8 +2948,9 @@ button {
   font-weight: 600;
   letter-spacing: 0.4px;
 
-  color: #fff;
-  background: linear-gradient(135deg, #8b5e3c, #c8a27a);
+  color: #1f1812;
+  background: #f1e2cb;
+  border: 1px solid rgba(139, 115, 85, 0.2);
 
   border-radius: 999px;
 
@@ -3022,19 +3023,12 @@ button {
   }
 }
 
-.badge-top {
-  background: linear-gradient(135deg, #b45309, #f59e0b);
-}
-
-.badge-luxury {
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
-}
-.badge-outdoor-sofa {
-  background: linear-gradient(135deg, #b45309, #f59e0b);
-}
-
+.badge-top,
+.badge-luxury,
+.badge-outdoor-sofa,
 .badge-coffee-sets {
-  background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+  background: #f1e2cb;
+  color: #1f1812;
 }
 
 /* credit of nexvora */

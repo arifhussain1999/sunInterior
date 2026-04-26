@@ -290,7 +290,7 @@ export const siteConfig: SiteConfig = {
     "Luxury outdoor furniture catalog for modern homes, hospitality projects and premium terraces across India.",
   phone: process.env.NEXT_PUBLIC_PHONE_NUMBER || "+91 70295 19022",
   whatsappNumber: process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "917029519022",
-  email: process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "agaunny2000@gmail.com",
+  email: process.env.NEXT_PUBLIC_SUPPORT_EMAIL || "agsunny2000@gmail.com",
   instagramUrl: process.env.NEXT_PUBLIC_INSTAGRAM_URL || "https://www.instagram.com/sunseatings",
   facebookUrl:
     process.env.NEXT_PUBLIC_FACEBOOK_URL ||

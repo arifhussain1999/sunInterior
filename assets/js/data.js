@@ -138,7 +138,7 @@
       "Luxury outdoor furniture catalog for modern homes, hospitality projects and premium terraces across India.",
     phone: "+91 70295 19022",
     whatsappNumber: "917029519022",
-    email: "agaunny2000@gmail.com",
+    email: "agsunny2000@gmail.com",
     instagramUrl: "https://www.instagram.com/sunseatings",
     facebookUrl: "https://www.facebook.com/profile.php?id=61580987248000",
     catalogPdf: catalogPdfUrl(),
@@ -149,25 +149,24 @@
 
   var categoryBlueprints = [
     {
-      name: "Outdoor Sofa",
-      slug: "outdoor-sofa",
-      folder: "Sofa Sets",
-      bannerImage: assetPath("Sofa Sets", "Haven.png"),
-      accentFrom: "#2874F0",
-      accentTo: "#00C6FF",
-      badge: "Top Seller",
-      cardImageFit: "contain",
-      cardImageScale: 1,
+      name: "Rope Collection",
+      slug: "rope-collection",
+      folder: "Rope",
+      bannerImage: assetPath("Rope", "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream).png"),
+
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
+      badge: "Modern Aesthetic",
       order: 1,
-      heroStat: "48-hour quote turnaround"
+      heroStat: "Tactile rope weaving"
     },
     {
       name: "Coffee Sets",
       slug: "coffee-sets",
       folder: "Coffee Sets",
       bannerImage: assetPath("Coffee Sets", "Ivan.png"),
-      accentFrom: "#0F4C81",
-      accentTo: "#38BDF8",
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
       badge: "Luxury Pick",
       order: 2,
       heroStat: "Best for balconies"
@@ -177,8 +176,8 @@
       slug: "dining-sets",
       folder: "Dining Sets",
       bannerImage: assetPath("Dining Sets", "WW-44 (4 chair + 1 table).png"),
-      accentFrom: "#1F2937",
-      accentTo: "#2874F0",
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
       badge: "Family Favorite",
       order: 3,
       heroStat: "Resort-ready finishes"
@@ -188,12 +187,11 @@
       slug: "swings",
       folder: "Swings",
       bannerImage: assetPath("Swings", "Saturn.png"),
-      accentFrom: "#243B53",
-      accentTo: "#0EA5E9",
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
       badge: "Statement Design",
       cardImageFit: "contain",
       cardImageScale: 1,
-      cardMediaBackground: "linear-gradient(180deg, #fffdf9 0%, #f6efe6 100%)",
       order: 4,
       heroStat: "Designer silhouettes"
     },
@@ -202,8 +200,8 @@
       slug: "loungers",
       folder: "Loungers",
       bannerImage: assetPath("Loungers", "Zen.png"),
-      accentFrom: "#14532D",
-      accentTo: "#10B981",
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
       badge: "Poolside Ready",
       order: 5,
       heroStat: "UV-ready cushions"
@@ -213,8 +211,8 @@
       slug: "sunbeds",
       folder: "Sunbeds",
       bannerImage: assetPath("Sunbeds", "Glade.png"),
-      accentFrom: "#92400E",
-      accentTo: "#F59E0B",
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
       badge: "Resort Standard",
       order: 6,
       heroStat: "Hospitality grade"
@@ -224,8 +222,8 @@
       slug: "umbrellas",
       folder: "Umbrella",
       bannerImage: assetPath("Umbrella", "WW- U1 (Beige).png"),
-      accentFrom: "#7C2D12",
-      accentTo: "#FB923C",
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
       badge: "Shade Essential",
       order: 7,
       heroStat: "Wind-stable build"
@@ -235,14 +233,26 @@
       slug: "bar-sets",
       folder: "Bar Sets",
       bannerImage: assetPath("Bar Sets", "Martini.png"),
-      accentFrom: "#312E81",
-      accentTo: "#60A5FA",
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
       badge: "Entertainer Edit",
       cardImageFit: "contain",
       cardImageScale: 1,
-      cardMediaBackground: "linear-gradient(180deg, #fffdf9 0%, #f6efe6 100%)",
       order: 8,
       heroStat: "Commercial friendly"
+    },
+    {
+      name: "Outdoor Sofa",
+      slug: "outdoor-sofa",
+      folder: "Sofa Sets",
+      bannerImage: assetPath("Sofa Sets", "Haven.png"),
+      accentFrom: "#fffdf9",
+      accentTo: "#f6efe6",
+      badge: "Top Seller",
+      cardImageFit: "contain",
+      cardImageScale: 1,
+      order: 9,
+      heroStat: "48-hour quote turnaround"
     }
   ];
 
@@ -327,6 +337,23 @@
       "Autumn.png",
       "Vatican.png",
       "Canvas.png"
+    ],
+    "rope-collection": [
+      "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White).png",
+      "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White).png",
+      "Outdoor Rope 3-Piece Patio Set (Beige & Off-White).png",
+      "Outdoor Rope 3-Piece Patio Set (Beige).png",
+      "Outdoor Rope 3-Piece Patio Set (Grey & Cream).png",
+      "Outdoor 3-Piece Rope Patio Sofa Set (Grey).png",
+      "2-Piece Outdoor Rope Patio Dining Chairs.png",
+      "4-Piece Outdoor Rope Patio Furniture Set with Glass Top Table (Grey & Orange).png",
+      "Outdoor Rope 4-Piece Sofa Set with Wooden Top Round Table.png",
+      "4-Piece Outdoor Rope Sofa Set with Glass Top Table (Grey & Cream).png",
+      "All Weather Patio Rope Sofa Set with Glass Top Coffee Table.png",
+      "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream).png",
+      "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey).png",
+      "Outdoor L-Shaped Conversation Sofa Set.png",
+      "4-Piece Outdoor All Weather Rope Sofa Set.png"
     ]
   };
 
@@ -378,6 +405,12 @@
       highlights: ["Entertaining-focused design", "Indoor-outdoor placement", "Commercial friendly"],
       leadTime: "6-12 business days",
       warranty: "2 year warranty"
+    },
+    "rope-collection": {
+      material: "High-tenacity polyester rope with charcoal aluminium frame",
+      highlights: ["Hand-woven rope detail", "UV-resistant fibers", "Contemporary architectural look"],
+      leadTime: "8-15 business days",
+      warranty: "3 year structural warranty"
     }
   };
 
@@ -479,7 +512,23 @@
     "Serving Cart-01": 15400,
     "Autumn": 38000,
     "Vatican": 20000,
-    "Canvas": 23000
+    "Canvas": 23000,
+                // Rope Collection
+    "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White)": 145000,
+    "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White)": 85000,
+    "Outdoor Rope 3-Piece Patio Set (Beige & Off-White)": 85000,
+    "Outdoor Rope 3-Piece Patio Set (Beige)": 75000,
+    "Outdoor Rope 3-Piece Patio Set (Grey & Cream)": 85000,
+    "Outdoor 3-Piece Rope Patio Sofa Set (Grey)": 125000,
+    "2-Piece Outdoor Rope Patio Dining Chairs": 35000,
+    "4-Piece Outdoor Rope Patio Furniture Set with Glass Top Table (Grey & Orange)": 165000,
+    "Outdoor Rope 4-Piece Sofa Set with Wooden Top Round Table": 185000,
+    "4-Piece Outdoor Rope Sofa Set with Glass Top Table (Grey & Cream)": 155000,
+    "All Weather Patio Rope Sofa Set with Glass Top Coffee Table": 135000,
+    "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream)": 245000,
+    "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey)": 175000,
+    "Outdoor L-Shaped Conversation Sofa Set": 265000,
+    "4-Piece Outdoor All Weather Rope Sofa Set": 195000,
   };
 
   var categories = categoryBlueprints.map(function (category, index) {
@@ -489,20 +538,18 @@
       name: category.name,
       slug: category.slug,
       folder: category.folder,
-      description: category.description,
       bannerImage: category.bannerImage,
       accentFrom: category.accentFrom,
       accentTo: category.accentTo,
       badge: category.badge,
-      cardImageFit: category.cardImageFit,
-      cardImageScale: category.cardImageScale,
-      cardMediaBackground: category.cardMediaBackground,
-      order: category.order,
-      heroStat: category.heroStat
+      order: category.order || index + 1,
+      cardImageFit: category.cardImageFit || "cover",
+      cardImageScale: category.cardImageScale || 1,
+      heroStat: category.heroStat || "Premium furniture"
     };
   });
 
-  var categoryMap = {};
+var categoryMap = {};
   categories.forEach(function (category) {
     categoryMap[category.slug] = category;
   });
