@@ -3896,3 +3896,33 @@ button {
     grid-template-columns: 1fr 1fr;
   }
 }
+
+@media (max-width: 768px) {
+
+  /* 1. Left align flex items */
+  .header-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  /* 2. Logo wrapper should NOT stretch full width */
+  .logo-wrap.logo-wrap-brand {
+    width: auto;
+    margin: 0;
+  }
+
+  /* 3. Prevent inner container from forcing center */
+  .logo-box-wide {
+    height: clamp(70px, 5vw, 52px);   /* increase this */
+    width: auto;
+    text-align: left;
+  }
+
+  /* 4. Image alignment */
+  .logo-box-wide img {
+    display: block;
+    margin: 0;
+  }
+
+}
