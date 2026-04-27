@@ -526,7 +526,6 @@
       '    <p class="fk-save">Save ' + DATA.formatCurrency(savings) + " (" + escapeHtml(String(product.discountPercentage)) + "% off)</p>" +
       '    <p class="fk-delivery">🚚 Pan India Delivery Available</p>' +
       '    <div class="fk-actions">' +
-      '      <button class="fk-btn-view" type="button" data-quick-view="' + escapeHtml(product.id) + '">Quick View</button>' +
       '      <a class="fk-btn-enq" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber, product.name) + '" target="_blank" rel="noreferrer">Enquire</a>' +
       "    </div>" +
       "  </div>" +
