@@ -1603,7 +1603,7 @@ button {
   font-family: "Inter", serif;
   font-size: 46px;
   line-height: 0.95;
-  font-weight: 700;
+  
   letter-spacing: 0.08em;
 }
 
@@ -2812,7 +2812,7 @@ button {
   .hero-slide,
   .hero-slide-inner {
     min-height: 100vh;
-    min-height: 100svh;
+    min-height: 260px
   }
 
   .hero-slide-inner {
@@ -2850,6 +2850,11 @@ button {
     flex-direction: column;
     align-items: flex-start;
   }
+  .hero-slide {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
 }
 
 
@@ -3925,4 +3930,77 @@ button {
     margin: 0;
   }
 
+}
+
+
+@media (max-width: 640px) {
+  .hero-controls {
+    bottom: 1px;   /* aur neeche */
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
+  }
+
+  .dot.is-active {
+    width: 18px;
+  }
+  .dots {
+  background: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  padding: 0 !important;
+}
+.dots {
+  display: flex;
+  gap: 6px;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  background: #bbb;
+  border-radius: 50%;
+  border: none;
+}
+
+.dot.is-active {
+  width: 18px;
+  border-radius: 20px;
+  background: #fff;
+}
+}
+.hero-controls {
+  background: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.hero-controls::before,
+.hero-controls::after {
+  display: none !important;
+}
+/* 💻 Desktop FIX */
+
+@media (min-width: 769px) {
+  .hero-shell,
+  .hero-slide,
+  .hero-slide-inner {
+    height: 520px;        /* 👈 apne hisaab se adjust karo (380–500px best) */
+    min-height: unset;    /* 100svh hata do */
+  }
+
+  .hero-slide {
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+/* trust */
+/* 📱 Mobile view */
+@media (max-width: 640px) {
+  .trust-grid {
+    grid-template-columns: repeat(2, 1fr); /* 👈 2-2 layout */
+  }
 }

@@ -317,7 +317,11 @@
       '  <div class="container footer-grid">' +
       "    <div>" +
       '      <p class="footer-title">SUN SEATINGS</p>' +
-      '      <p class="footer-copy">A luxury furniture catalog designed to feel like a premium commerce experience, with quotation-first conversion for homes, architects, cafes and hospitality projects.</p>' +
+      `<p class="footer-copy">
+Thoughtfully crafted outdoor furniture for modern homes, cafés, and hospitality spaces.
+Built to last, priced to scale.
+Crafted for comfort.
+</p>` +
       '      <div class="footer-link-list">' +
       '        <span class="footer-meta">' + escapeHtml(DATA.siteConfig.address) + "</span>" +
       '        <a href="' + DATA.buildPhoneLink(DATA.siteConfig.phone) + '">' + escapeHtml(DATA.siteConfig.phone) + "</a>" +
@@ -359,7 +363,7 @@
       "    </div>" +
       "  </div>" +
       '  <div class="container footer-bottom">' +
-'  <span class="footer-meta">© 2026 SUN SEATINGS. Built for luxury catalogue selling.</span>' +
+'  <span class="footer-meta">© 2026 SUN SEATINGS. Crafted for Comfort.</span>' +
 '  <span class="footer-credit">Built by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a> - Web Design Agency</span>' +
 "</div>" +
       "</footer>";
@@ -1556,30 +1560,37 @@ DATA.trustPoints
     return '<div class="card-stack"><p class="card-copy" style="margin-top:0;">' + escapeHtml(product.description) + "</p><p class=\"card-copy\">" + escapeHtml(product.marketingCopy) + "</p></div>";
   }
 
-  function renderAboutPage() {
-    setMeta("About | SUN SEATINGS", "Learn about the SUN SEATINGS brand, luxury positioning and quotation-first customer experience.");
-    content.innerHTML =
-      '<section class="section"><div class="container"><div class="two-col">' +
-      '  <div class="surface card">' +
-'    <p class="eyebrow">About Brand</p>' +
-'    <h1 class="section-title">A luxury outdoor brand built for modern Indian spaces.</h1>' +
-'    <p class="section-subtitle">SUN SEATINGS blends premium catalogue merchandising with personal quotation support. The site is designed to feel familiar to shoppers used to Flipkart, Amazon and Meesho, while elevating the brand with a cleaner, more luxurious finish.</p>' +
+ function renderAboutPage() {
+  setMeta("About | SUN SEATINGS", "Learn about the SUN SEATINGS brand, luxury positioning and quotation-first customer experience.");
+  content.innerHTML =
+    '<section class="section"><div class="container"><div class="two-col">' +
+    '  <div class="surface card">' +
+    '    <p class="eyebrow">About Brand</p>' +
+    '    <h1 class="section-title">A premium outdoor furniture brand for modern Indian living.</h1>' +
 
-'    <p class="credit-line">Website designed by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a>, a digital experience studio.</p>' +
+    `    <p class="section-subtitle">
+Sun Seatings creates thoughtfully designed outdoor furniture built for India’s climate and lifestyle. From poolside loungers to garden and terrace seating, every piece is made to offer lasting comfort, durability, and clean, contemporary design.
 
-'  </div>' +
-      '  <div class="surface card"><div class="grid grid-2">' +
-      [
-        ["Luxury-first", "Elevated brand expression with high-conversion ecommerce patterns."],
-        ["Project-ready", "Made for homeowners, cafes, villas, resorts and architects."]
-      ]
-        .map(function (item) {
-          return '<div class="trust-card"><h3 class="card-title" style="margin-top:0;font-size:24px;">' + item[0] + '</h3><p class="card-copy">' + item[1] + "</p></div>";
-        })
-        .join("") +
-      "  </div></div>" +
-      "</div></div></section>";
-  }
+We combine strong materials with refined finishes to deliver furniture that looks elegant and performs effortlessly in outdoor conditions. Whether it’s a home, café, or hospitality space, our collections are made to elevate everyday outdoor living.
+
+At Sun Seatings, we focus on quality you can rely on, designs that feel current, and a buying experience that is simple, transparent, and dependable.
+</p>` +
+
+    '    <p class="credit-line">Website designed by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a>, a digital experience studio.</p>' +
+
+    '  </div>' +
+    '  <div class="surface card"><div class="grid grid-2">' +
+    [
+      ["Luxury-first", "Elevated brand expression with high-conversion ecommerce patterns."],
+      ["Project-ready", "Made for homeowners, cafes, villas, resorts and architects."]
+    ]
+      .map(function (item) {
+        return '<div class="trust-card"><h3 class="card-title" style="margin-top:0;font-size:24px;">' + item[0] + '</h3><p class="card-copy">' + item[1] + "</p></div>";
+      })
+      .join("") +
+    "  </div></div>" +
+    "</div></div></section>";
+}
 
   function renderContactPage() {
     setMeta("Contact | SUN SEATINGS", "Send a product enquiry, request quotation, call or start a WhatsApp conversation with SUN SEATINGS.");

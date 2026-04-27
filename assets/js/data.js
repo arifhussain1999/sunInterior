@@ -138,13 +138,13 @@
       "Luxury outdoor furniture catalog for modern homes, hospitality projects and premium terraces across India.",
     phone: "+91 70295 19022",
     whatsappNumber: "917029519022",
-    email: "agsunny2000@gmail.com",
+    email: "bluekiteindustries@gmail.com",
     instagramUrl: "https://www.instagram.com/sunseatings",
     facebookUrl: "https://www.facebook.com/profile.php?id=61580987248000",
     catalogPdf: catalogPdfUrl(),
     loaderLogo: assetPath("LOGO", "SUN SEATINGS Loader.png"),
     address: "PCM Tower, Sevoke Road, Siliguri 734001",
-    supportHours: "Mon-Sat - 10:00 AM to 7:00 PM"
+    supportHours: "Mon-Sat - 10:00 AM to 8:00 PM"
   };
 
   var categoryBlueprints = [
