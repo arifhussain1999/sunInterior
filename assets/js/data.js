@@ -513,22 +513,22 @@
     "Autumn": 38000,
     "Vatican": 20000,
     "Canvas": 23000,
-                // Rope Collection
-    "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White)": 145000,
-    "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White)": 85000,
-    "Outdoor Rope 3-Piece Patio Set (Beige & Off-White)": 85000,
-    "Outdoor Rope 3-Piece Patio Set (Beige)": 75000,
-    "Outdoor Rope 3-Piece Patio Set (Grey & Cream)": 85000,
-    "Outdoor 3-Piece Rope Patio Sofa Set (Grey)": 125000,
-    "2-Piece Outdoor Rope Patio Dining Chairs": 35000,
-    "4-Piece Outdoor Rope Patio Furniture Set with Glass Top Table (Grey & Orange)": 165000,
-    "Outdoor Rope 4-Piece Sofa Set with Wooden Top Round Table": 185000,
-    "4-Piece Outdoor Rope Sofa Set with Glass Top Table (Grey & Cream)": 155000,
-    "All Weather Patio Rope Sofa Set with Glass Top Coffee Table": 135000,
-    "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream)": 245000,
-    "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey)": 175000,
-    "Outdoor L-Shaped Conversation Sofa Set": 265000,
-    "4-Piece Outdoor All Weather Rope Sofa Set": 195000,
+    // Rope Collection
+    "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White)": 16916,
+    "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White)": 16916,
+    "Outdoor Rope 3-Piece Patio Set (Beige & Off-White)": 27058,
+    "Outdoor Rope 3-Piece Patio Set (Beige)": 28999,
+    "Outdoor Rope 3-Piece Patio Set (Grey & Cream)": 27999,
+    "Outdoor 3-Piece Rope Patio Sofa Set (Grey)": 23916,
+    "2-Piece Outdoor Rope Patio Dining Chairs": 15749,
+    "4-Piece Outdoor Rope Patio Furniture Set with Glass Top Table (Grey & Orange)": 55293,
+    "Outdoor Rope 4-Piece Sofa Set with Wooden Top Round Table": 47058,
+    "4-Piece Outdoor Rope Sofa Set with Glass Top Table (Grey & Cream)": 7587,
+    "All Weather Patio Rope Sofa Set with Glass Top Coffee Table": 52499,
+    "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream)": 50399,
+    "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey)": 83999,
+    "Outdoor L-Shaped Conversation Sofa Set": 54249,
+    "5-SEATER OUTDOOR ALL-WEATHER ROPE SOFA SET": 195000,
   };
 
   var categories = categoryBlueprints.map(function (category, index) {
@@ -549,7 +549,7 @@
     };
   });
 
-var categoryMap = {};
+  var categoryMap = {};
   categories.forEach(function (category) {
     categoryMap[category.slug] = category;
   });
@@ -604,7 +604,7 @@ var categoryMap = {};
         categoryId: category.id,
         categorySlug: category.slug,
         categoryName: category.name,
-        tagline: category.name + " crafted for premium Indian outdoor living.",
+        tagline: displayName + " \u2013 " + category.name + " Collection",
         description:
           displayName +
           " is part of the " +

@@ -496,27 +496,38 @@
   }
 
   function productCardMarkup(product) {
+    var savings = product.originalPrice - product.price;
     return (
-      '<article class="surface card product-card">' +
-      '  <div class="sale-badges">' +
-      '    <span class="badge badge-red">' + escapeHtml(product.discountPercentage + "% OFF") + "</span>" +
-      (product.onlyFewLeft ? '<span class="badge badge-green">Only few left</span>' : "") +
+      '<article class="product-card fk-card">' +
+      // Top badge row — properly contained, no overflow
+      '  <div class="fk-badges">' +
+      '    <span class="fk-off-badge">' + escapeHtml(product.discountPercentage + "% off") + "</span>" +
+      (product.bestSeller ? '<span class="fk-top-badge">Best Seller</span>' : "") +
       "  </div>" +
-      '  <button class="wishlist-button" type="button" aria-label="Wishlist">♡</button>' +
-      '  <a href="' + DATA.productUrl(product) + '" class="product-card-media">' +
-      '    <img src="' + product.primaryImage + '" alt="' + escapeHtml(product.name) + '">' +
+      // Wishlist
+      '  <button class="fk-wishlist" type="button" aria-label="Wishlist" title="Add to Wishlist">♡</button>' +
+      // Product image — clean, full width
+      '  <a href="' + DATA.productUrl(product) + '" class="fk-img-wrap">' +
+      '    <img src="' + product.primaryImage + '" alt="' + escapeHtml(product.name) + '" class="fk-img" loading="lazy">' +
+      (product.onlyFewLeft ? '<span class="fk-stock-tag">Only few left</span>' : "") +
       "  </a>" +
-      '  <div class="product-card-body">' +
-      '    <div class="rating-row"><span>★★★★★</span><span class="rating-meta">' + escapeHtml(product.rating + " (" + product.reviewCount + ")") + "</span></div>" +
-      '    <a href="' + DATA.productUrl(product) + '"><h3 class="card-title">' + escapeHtml(product.name) + "</h3></a>" +
-      '    <p class="card-copy">' + escapeHtml(product.tagline) + "</p>" +
-      '    <div class="product-price">' +
-      '      <span class="price-current">' + DATA.formatCurrency(product.price) + "</span>" +
-      '      <span class="price-original">' + DATA.formatCurrency(product.originalPrice) + "</span>" +
+      // Card content
+      '  <div class="fk-body">' +
+      '    <p class="fk-cat">' + escapeHtml(product.categoryName) + "</p>" +
+      '    <a href="' + DATA.productUrl(product) + '" class="fk-name-link"><h3 class="fk-name">' + escapeHtml(product.name) + "</h3></a>" +
+      '    <div class="fk-rating">' +
+      '      <span class="fk-stars-pill">★ ' + escapeHtml(String(product.rating)) + "</span>" +
+      '      <span class="fk-rcount">(' + escapeHtml(String(product.reviewCount)) + ")</span>" +
       "    </div>" +
-      '    <div class="product-actions">' +
-      '      <button class="btn btn-outline" type="button" data-quick-view="' + escapeHtml(product.id) + '">Quick View</button>' +
-      '      <a class="btn btn-primary" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber, product.name) + '" target="_blank" rel="noreferrer">Enquire Now</a>' +
+      '    <div class="fk-price-row">' +
+      '      <span class="fk-price">' + DATA.formatCurrency(product.price) + "</span>" +
+      '      <span class="fk-mrp"><s>' + DATA.formatCurrency(product.originalPrice) + "</s></span>" +
+      "    </div>" +
+      '    <p class="fk-save">Save ' + DATA.formatCurrency(savings) + " (" + escapeHtml(String(product.discountPercentage)) + "% off)</p>" +
+      '    <p class="fk-delivery">🚚 Pan India Delivery Available</p>' +
+      '    <div class="fk-actions">' +
+      '      <button class="fk-btn-view" type="button" data-quick-view="' + escapeHtml(product.id) + '">Quick View</button>' +
+      '      <a class="fk-btn-enq" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber, product.name) + '" target="_blank" rel="noreferrer">Enquire</a>' +
       "    </div>" +
       "  </div>" +
       "</article>"
@@ -1094,8 +1105,22 @@ DATA.trustPoints
       var globalSearchInput = document.getElementById("global-search-input");
       setMeta(heading.title + " | SUN SEATINGS", heading.description);
 
+      // Amazon-style category pills
+      var categoryPills =
+        '<div class="fk-category-pills">' +
+        '<button class="fk-cat-pill' + (state.category === "all" ? " is-active" : "") + '" type="button" data-filter-group="category" data-filter-value="all">🛋 All Products</button>' +
+        categories.map(function (cat) {
+          return (
+            '<button class="fk-cat-pill' + (state.category === cat.slug ? " is-active" : "") + '" type="button" data-filter-group="category" data-filter-value="' + escapeHtml(cat.slug) + '">' +
+            escapeHtml(cat.name) + "</button>"
+          );
+        }).join("") +
+        "</div>";
+
+      var activeCategory = state.category !== "all" ? categories.find(function(c) { return c.slug === state.category; }) : null;
+
       content.innerHTML =
-        '<section class="section">' +
+        '<section class="section" style="padding-bottom:14px;">' +
         '  <div class="container">' +
         '    <div class="surface page-hero">' +
         '      <p class="eyebrow">' + escapeHtml(heading.eyebrow) + "</p>" +
@@ -1105,18 +1130,23 @@ DATA.trustPoints
         "  </div>" +
         "</section>" +
         '<section class="section" style="padding-top:0;">' +
-        '  <div class="container shop-layout">' +
+        '  <div class="container">' +
+        '    ' + categoryPills +
+        "  </div>" +
+        '  <div class="container shop-layout" style="margin-top:14px;">' +
         '    <aside class="surface filter-panel">' + renderShopFilters() + "</aside>" +
         '    <section class="surface shop-panel">' +
         '      <div class="shop-toolbar">' +
-        '        <p class="muted">Showing <strong style="color:var(--brand-text);">' + visible.length + "</strong> of " + items.length + " products</p>" +
+        '        <p class="muted" style="font-size:13px;">Showing <strong style="color:var(--brand-text);">' + visible.length + "</strong> of " + items.length + " products" +
+        (activeCategory ? ' in <strong style="color:var(--brand-blue);">' + escapeHtml(activeCategory.name) + "</strong>" : "") +
+        "</p>" +
         '        <div class="toolbar-actions">' +
-        '          <button class="btn btn-outline shop-filter-toggle" type="button" data-open-shop-filters>Filters</button>' +
+        '          <button class="btn btn-outline shop-filter-toggle" type="button" data-open-shop-filters style="min-height:38px;font-size:13px;padding:0 14px;">⚙ Filters</button>' +
         '          <div class="view-toggle">' +
-        '            <button class="view-button' + (state.view === "grid" ? " is-active" : "") + '" type="button" data-view="grid">▦</button>' +
-        '            <button class="view-button' + (state.view === "list" ? " is-active" : "") + '" type="button" data-view="list">☰</button>' +
+        '            <button class="view-button' + (state.view === "grid" ? " is-active" : "") + '" type="button" data-view="grid" title="Grid view">▦</button>' +
+        '            <button class="view-button' + (state.view === "list" ? " is-active" : "") + '" type="button" data-view="list" title="List view">☰</button>' +
         "          </div>" +
-        '          <select class="select" id="sort-select" style="min-width:210px;">' +
+        '          <select class="select" id="sort-select" style="min-width:170px;font-size:13px;">' +
         renderSortOptions(state.sort) +
         "          </select>" +
         "        </div>" +
@@ -1127,7 +1157,7 @@ DATA.trustPoints
         '      <div class="shop-grid' + (state.view === "list" ? " is-list" : "") + '" id="shop-grid">' +
         (visible.length
           ? visible.map(productCardMarkup).join("")
-          : '<div class="empty-state"><p class="eyebrow">No products found</p><h2 class="card-title" style="margin-top:12px;font-size:34px;">Try adjusting your filters or search.</h2><p class="card-copy">We could not find a match for this combination. Reset filters, raise the price range or browse all products again.</p><div class="stack-actions"><button class="btn btn-blue" type="button" id="empty-reset">Show all products</button><a class="btn btn-outline" href="contact.html">Request help</a></div></div>') +
+          : '<div class="empty-state"><p class="eyebrow">No products found</p><h2 class="card-title" style="margin-top:12px;font-size:26px;">Try adjusting your filters.</h2><p class="card-copy">Reset filters or browse all products.</p><div class="stack-actions" style="justify-content:center;margin-top:16px;"><button class="btn btn-blue" type="button" id="empty-reset">Show all products</button><a class="btn btn-outline" href="contact.html">Get help</a></div></div>') +
         "      </div>" +
         '      <div id="shop-sentinel"></div>' +
         (visible.length < items.length ? '<p class="load-note">Loading more products as you scroll...</p>' : "") +
@@ -1136,14 +1166,19 @@ DATA.trustPoints
         '  <div class="shop-filter-drawer" id="shop-filter-drawer">' +
         '    <div class="mobile-backdrop" data-close-shop-filters="true"></div>' +
         '    <div class="mobile-panel shop-filter-panel">' +
-        '      <div class="split-row">' +
-        '        <div><p class="logo-title" style="font-size:32px;margin:0;">Filters</p><p class="card-copy" style="margin-top:8px;">Refine the catalog without losing your place.</p></div>' +
+        '      <div class="split-row" style="margin-bottom:14px;">' +
+        '        <p style="font-size:20px;font-weight:800;margin:0;">Filters</p>' +
         '        <button class="circle-button" type="button" data-close-shop-filters="true">✕</button>' +
         "      </div>" +
                renderShopFilters() +
         "    </div>" +
         "  </div>" +
-        "</section>";
+        "</section>" +
+        // Mobile sticky bottom bar
+        '<div class="mobile-cta-bar" id="mobile-cta-bar">' +
+        '  <a class="btn btn-green" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber) + '" target="_blank" rel="noreferrer">💬 WhatsApp Us</a>' +
+        '  <a class="btn btn-blue" href="' + DATA.buildPhoneLink(DATA.siteConfig.phone) + '">📞 Call Now</a>' +
+        "</div>";
 
       if (globalSearchInput) {
         globalSearchInput.value = state.query;
