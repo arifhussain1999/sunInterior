@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sunseatings.com/sitemap.xml
+Sitemap: https://www.sunseatings.com/sitemap.xml
