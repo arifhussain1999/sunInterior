@@ -212,6 +212,7 @@
       { href: "shop.html", label: "Shop", match: "shop" },
       { href: "categories.html", label: "Categories", match: "categories" },
       { href: "about.html", label: "About", match: "about" },
+      { href: "blog.html", label: "Blog", match: "blog" },
       { href: "contact.html", label: "Contact", match: "contact" }
     ];
   }
@@ -363,9 +364,9 @@ Crafted for comfort.
       "    </div>" +
       "  </div>" +
       '  <div class="container footer-bottom">' +
-'  <span class="footer-meta">© 2026 SUN SEATINGS. Crafted for Comfort.</span>' +
-'  <span class="footer-credit">Built by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a> - Web Design Agency</span>' +
-"</div>" +
+      '  <span class="footer-meta">© 2026 SUN SEATINGS. Crafted for Comfort.</span>' +
+      '  <span class="footer-credit">Built by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a> - Web Design Agency</span>' +
+      "</div>" +
       "</footer>";
   }
 
@@ -405,33 +406,33 @@ Crafted for comfort.
         "  </div>" +
         (results.products.length
           ? results.products
-              .map(function (item) {
-                return (
-                  '<a class="search-result" href="' + DATA.productUrl(item) + '">' +
-                  '  <span class="search-result-media"><img src="' + item.primaryImage + '" alt="' + escapeHtml(item.name) + '"></span>' +
-                  "  <span>" +
-                  '    <strong class="mega-card-title">' + escapeHtml(item.name) + "</strong>" +
-                  '    <span class="mega-card-copy">' + escapeHtml(item.categoryName) + "</span>" +
-                  "  </span>" +
-                  "</a>"
-                );
-              })
-              .join("")
+            .map(function (item) {
+              return (
+                '<a class="search-result" href="' + DATA.productUrl(item) + '">' +
+                '  <span class="search-result-media"><img src="' + item.primaryImage + '" alt="' + escapeHtml(item.name) + '"></span>' +
+                "  <span>" +
+                '    <strong class="mega-card-title">' + escapeHtml(item.name) + "</strong>" +
+                '    <span class="mega-card-copy">' + escapeHtml(item.categoryName) + "</span>" +
+                "  </span>" +
+                "</a>"
+              );
+            })
+            .join("")
           : '<p class="search-empty">No products matched this search yet.</p>') +
         "</div>" +
         '<div class="search-section">' +
         '  <p class="search-section-title">Categories</p>' +
         (results.categories.length
           ? results.categories
-              .map(function (item) {
-                return (
-                  '<a class="search-chip" href="' + DATA.categoryUrl(item.slug) + '">' +
-                  '  <span class="search-chip-title">' + escapeHtml(item.name) + "</span>" +
-                  '  <span class="search-chip-copy">' + escapeHtml(item.badge || item.heroStat || "Explore collection") + "</span>" +
-                  "</a>"
-                );
-              })
-              .join("")
+            .map(function (item) {
+              return (
+                '<a class="search-chip" href="' + DATA.categoryUrl(item.slug) + '">' +
+                '  <span class="search-chip-title">' + escapeHtml(item.name) + "</span>" +
+                '  <span class="search-chip-copy">' + escapeHtml(item.badge || item.heroStat || "Explore collection") + "</span>" +
+                "</a>"
+              );
+            })
+            .join("")
           : '<p class="search-empty">Try a product type like outdoor sofa or dining set.</p>') +
         "</div>" +
         '<div class="search-tags">' +
@@ -538,41 +539,41 @@ Crafted for comfort.
   }
 
   function categoryCardMarkup(category, count) {
-  var mediaStyle =
-    "background:" +
-    (category.cardMediaBackground ||
-      ("linear-gradient(135deg," +
-        category.accentFrom +
-        " 0%," +
-        category.accentTo +
-        " 100%)")) +
-    ";" +
-    "--category-image-fit:contain;" +
-    "--category-image-scale:1;";
+    var mediaStyle =
+      "background:" +
+      (category.cardMediaBackground ||
+        ("linear-gradient(135deg," +
+          category.accentFrom +
+          " 0%," +
+          category.accentTo +
+          " 100%)")) +
+      ";" +
+      "--category-image-fit:contain;" +
+      "--category-image-scale:1;";
 
-  return (
-    '<a class="category-card premium-card" href="' + DATA.categoryUrl(category.slug) + '">' +
+    return (
+      '<a class="category-card premium-card" href="' + DATA.categoryUrl(category.slug) + '">' +
 
-    // IMAGE
-    '  <div class="category-card-media" style="' + mediaStyle + '">' +
-    '    <img class="category-card-image" src="' + category.bannerImage + '" alt="' + escapeHtml(category.name) + '">' +
-    '    <span class="premium-badge badge-' + category.slug + '">' + escapeHtml(category.badge) + '</span>' +
-    "  </div>" +
+      // IMAGE
+      '  <div class="category-card-media" style="' + mediaStyle + '">' +
+      '    <img class="category-card-image" src="' + category.bannerImage + '" alt="' + escapeHtml(category.name) + '">' +
+      '    <span class="premium-badge badge-' + category.slug + '">' + escapeHtml(category.badge) + '</span>' +
+      "  </div>" +
 
-    // BODY
-    '  <div class="category-card-body">' +
-    '    <h3 class="card-title">' + escapeHtml(category.name) + "</h3>" +
-    '    <p class="card-copy">' + escapeHtml(category.description || "") + "</p>" +
+      // BODY
+      '  <div class="category-card-body">' +
+      '    <h3 class="card-title">' + escapeHtml(category.name) + "</h3>" +
+      '    <p class="card-copy">' + escapeHtml(category.description || "") + "</p>" +
 
-    '    <div class="card-footer">' +
-    '      <span class="product-count">' + String(count || 0) + " products</span>" +
-    '      <span class="card-cta">Explore →</span>' +
-    "    </div>" +
-    "  </div>" +
+      '    <div class="card-footer">' +
+      '      <span class="product-count">' + String(count || 0) + " products</span>" +
+      '      <span class="card-cta">Explore →</span>' +
+      "    </div>" +
+      "  </div>" +
 
-    "</a>"
-  );
-}
+      "</a>"
+    );
+  }
 
   function enquiryFormMarkup(options) {
     var message = options.message || "";
@@ -584,7 +585,7 @@ Crafted for comfort.
       '    <p class="section-subtitle">' +
       escapeHtml(
         options.description ||
-          "Fill the form and the SUN SEATINGS team can call, WhatsApp or email you with pricing, delivery timeline and catalog assistance."
+        "Fill the form and the SUN SEATINGS team can call, WhatsApp or email you with pricing, delivery timeline and catalog assistance."
       ) +
       "</p>" +
       '    <form class="form-grid enquiry-form" data-enquiry-type="' + escapeHtml(options.type) + '" data-product-id="' + escapeHtml(options.productId || "") + '" data-product-name="' + escapeHtml(options.productName || "") + '">' +
@@ -791,10 +792,18 @@ Crafted for comfort.
   function reviewMarkup(item) {
     return (
       '<div class="review-panel">' +
-      '  <div class="rating-row" style="font-size:16px;">★★★★★</div>' +
+      '  <div style="display:flex;align-items:center;gap:8px;margin-bottom:12px;">' +
+      '    <span style="background:#388e3c;color:#fff;padding:2px 8px;border-radius:3px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;gap:4px;">5 ★</span>' +
+      '    <span style="color:#878787;font-size:13px;">Verified Buyer</span>' +
+      '  </div>' +
       '  <p class="review-quote">' + escapeHtml(item.quote) + "</p>" +
-      '  <p style="margin-top:20px;font-size:18px;font-weight:800;">' + escapeHtml(item.name) + "</p>" +
-      '  <p class="muted" style="margin-top:6px;">' + escapeHtml(item.city) + " • Verified luxury buyer</p>" +
+      '  <div style="margin-top:20px;display:flex;align-items:center;gap:12px;">' +
+      '    <div style="width:36px;height:36px;border-radius:50%;background:#f0f5ff;display:flex;align-items:center;justify-content:center;font-weight:700;color:#2874f0;font-size:14px;">' + escapeHtml(item.name.charAt(0)) + "</div>" +
+      '    <div>' +
+      '      <p style="margin:0;font-size:14px;font-weight:700;color:#212121;">' + escapeHtml(item.name) + "</p>" +
+      '      <p style="margin:2px 0 0;font-size:12px;color:#878787;">' + escapeHtml(item.city) + "</p>" +
+      '    </div>' +
+      '  </div>' +
       "</div>" +
       '<div class="review-media"><img src="' + item.image + '" alt="' + escapeHtml(item.name) + '"></div>'
     );
@@ -837,33 +846,38 @@ Crafted for comfort.
       '    <div class="grid grid-4">' +
       categories
         .map(function (category) {
-  return categoryCardMarkup(category, counts[category.slug] || 0);
-})
-.join("") +
-"    </div>" +
-"  </div>" +
-"</section>" +
-'<section class="section">' +
-'  <div class="container">' +
-'    <div class="split-row section-heading">' +
-'      <div><p class="eyebrow">Featured products</p><h2 class="section-title">Trending catalog pieces that feel marketplace-ready.</h2></div>' +
-"    </div>" +
-'    <div class="featured-track" id="featured-track">' +
-featuredProducts.map(productCardMarkup).join("") +
-"    </div>" +
-"  </div>" +
-"</section>" +
-'<section class="section">' +
-'  <div class="container surface card">' +
-'    <div class="section-heading"><p class="eyebrow">Why Choose Us</p><h2 class="section-title">Trust signals built to convert catalogue visits into enquiries.</h2></div>' +
-'    <div class="trust-grid">' +
-DATA.trustPoints
+          return categoryCardMarkup(category, counts[category.slug] || 0);
+        })
+        .join("") +
+      "    </div>" +
+      "  </div>" +
+      "</section>" +
+      '<section class="section">' +
+      '  <div class="container">' +
+      '    <div class="split-row section-heading">' +
+      '      <div><p class="eyebrow">Featured products</p><h2 class="section-title">Trending catalog pieces that feel marketplace-ready.</h2></div>' +
+      "    </div>" +
+      '    <div class="featured-track" id="featured-track">' +
+      featuredProducts.map(productCardMarkup).join("") +
+      "    </div>" +
+      "  </div>" +
+      "</section>" +
+      '<section class="section" style="background:#fff;padding:40px 0;">' +
+      '  <div class="container">' +
+      '    <div class="section-heading"><p class="eyebrow" style="color:#2874f0;">Why Choose Us</p><h2 class="section-title" style="font-size:24px;font-weight:600;color:#212121;">Trust signals built to convert catalogue visits into enquiries.</h2></div>' +
+      '    <div class="trust-grid">' +
+      DATA.trustPoints
         .map(function (point) {
           return (
             '<div class="trust-card">' +
-            '  <p class="eyebrow" style="color:var(--brand-muted);">' + escapeHtml(point.stat) + "</p>" +
-            '  <h3 class="card-title" style="margin-top:14px;font-size:24px;">' + escapeHtml(point.title) + "</h3>" +
-            '  <p class="card-copy">' + escapeHtml(point.description) + "</p>" +
+            '  <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">' +
+            '    <div style="width:40px;height:40px;border-radius:50%;background:#f0f5ff;display:flex;align-items:center;justify-content:center;">' +
+            '      <span style="color:#2874f0;font-size:18px;font-weight:900;">✓</span>' +
+            '    </div>' +
+            '    <p class="eyebrow" style="margin:0;color:#2874f0;font-weight:800;font-size:11px;">' + escapeHtml(point.stat) + "</p>" +
+            '  </div>' +
+            '  <h3 style="margin:0;font-size:18px;font-weight:700;color:#212121;">' + escapeHtml(point.title) + "</h3>" +
+            '  <p style="margin:8px 0 0;font-size:13px;color:#878787;line-height:1.6;">' + escapeHtml(point.description) + "</p>" +
             "</div>"
           );
         })
@@ -871,9 +885,9 @@ DATA.trustPoints
       "    </div>" +
       "  </div>" +
       "</section>" +
-      '<section class="section">' +
-      '  <div class="container surface review-shell">' +
-      '    <div class="section-heading"><p class="eyebrow">Customer Reviews</p><h2 class="section-title">Social proof that helps the page sell harder.</h2></div>' +
+      '<section class="section" style="background:#f1f3f6;padding:40px 0;">' +
+      '  <div class="container review-shell">' +
+      '    <div class="section-heading"><p class="eyebrow" style="color:#2874f0;">Customer Reviews</p><h2 class="section-title" style="font-size:24px;font-weight:600;color:#212121;">What our customers say</h2></div>' +
       '    <div class="review-layout" id="review-grid">' + reviewMarkup(DATA.testimonials[0]) + "</div>" +
       '    <div class="dots" id="review-dots">' +
       DATA.testimonials
@@ -884,26 +898,27 @@ DATA.trustPoints
       "    </div>" +
       "  </div>" +
       "</section>" +
-      '<section class="section">' +
-      '  <div class="container surface promo-band">' +
-      '    <div class="hero-grid">' +
-      '      <div>' +
-      '        <p class="eyebrow" style="color:rgba(255,255,255,0.75);">WhatsApp Banner</p>' +
-      '        <h2 class="section-title whatsapp-title">Talk to our furniture expert.</h2>' +
-      '        <p class="section-subtitle" style="color:rgba(255,255,255,0.82);">Share a product link, a rough layout or just your space type. We can help with finish suggestions, delivery estimates and quotation support on WhatsApp.</p>' +
-      '        <div class="stack-actions">' +
-      '          <a class="btn btn-green" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber) + '" target="_blank" rel="noreferrer">Open WhatsApp Chat</a>' +
-      '          <a class="btn btn-light-outline" href="contact.html">Request Quotation</a>' +
-      "        </div>" +
-      "      </div>" +
-      '      <div class="grid grid-2">' +
+      '<section class="section" style="background:#f0f5ff;padding:40px 0;">' +
+      '  <div class="container">' +
+      '    <div class="promo-grid-mobile" style="display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;">' +
+      '      <div class="promo-text-side">' +
+      '        <p class="eyebrow" style="color:#2874f0;margin:0;font-weight:700;">WHATSAPP SUPPORT</p>' +
+      '        <h2 class="section-title" style="margin:12px 0;font-size:28px;font-weight:700;color:#212121;line-height:1.2;">Talk to our furniture expert.</h2>' +
+      '        <p style="margin:16px 0;font-size:14px;color:#666;line-height:1.6;">Share a product link, a rough layout or space type. Get instant support on WhatsApp.</p>' +
+      '        <div class="stack-actions" style="margin-top:20px;display:flex;gap:12px;flex-wrap:wrap;">' +
+      '          <a class="btn btn-green" style="background:#24d366;border-color:#24d366;color:#fff;padding:10px 20px;border-radius:2px;font-weight:700;font-size:14px;" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber) + '" target="_blank" rel="noreferrer">Chat Now</a>' +
+      '          <a class="btn btn-outline" style="border:1px solid #2874f0;color:#2874f0;padding:10px 20px;border-radius:2px;font-weight:700;font-size:14px;" href="contact.html">Request Quote</a>' +
+      '        </div>' +
+      '      </div>' +
+      '      <div class="grid grid-2" style="gap:12px;">' +
       featuredProducts
         .slice(0, 2)
         .map(function (product) {
           return (
-            '<div class="surface card" style="background:rgba(255,255,255,0.1);color:#fff;border-color:rgba(255,255,255,0.16);">' +
-            '  <div class="square-media" style="height:190px;background:rgba(255,255,255,0.08);"><img src="' + product.primaryImage + '" alt="' + escapeHtml(product.name) + '" style="height:190px;padding:16px;"></div>' +
-            '  <div class="product-card-body"><p class="card-title" style="margin-top:0;font-size:22px;color:#fff;">' + escapeHtml(product.name) + '</p><p class="card-copy" style="color:rgba(255,255,255,0.7);">' + escapeHtml(product.categoryName) + "</p></div>" +
+            '<div class="trust-card" style="padding:10px;text-align:center;background:#fff;border-radius:4px;border:1px solid #f0f0f0;display:flex;flex-direction:column;align-items:center;">' +
+            '  <div style="width:100%;aspect-ratio:1/1;background:#f9f9f9;border-radius:2px;margin-bottom:10px;overflow:hidden;display:flex;align-items:center;justify-content:center;"><img src="' + product.primaryImage + '" alt="' + escapeHtml(product.name) + '" style="max-width:90%;max-height:90%;object-fit:contain;"></div>' +
+            '  <h3 style="margin:0;font-size:14px;font-weight:700;color:#212121;">' + escapeHtml(product.name) + '</h3>' +
+            '  <p style="margin:2px 0 0;font-size:11px;color:#878787;">' + escapeHtml(product.categoryName) + "</p>" +
             "</div>"
           );
         })
@@ -1093,8 +1108,8 @@ DATA.trustPoints
           return slug === "all"
             ? "All Products"
             : categories.find(function (category) {
-                return category.slug === slug;
-              }).name;
+              return category.slug === slug;
+            }).name;
         }) +
         '<div class="filter-group"><p class="filter-title">Price range</p><input data-price-range type="range" min="5000" max="' + maxPrice + '" value="' + state.price + '" style="width:100%;accent-color:var(--brand-blue);"><p class="range-value" data-price-value>Up to ' + DATA.formatCurrency(state.price) + "</p></div>" +
         renderFilterGroup("Material", ["all", "rattan", "wood", "metal", "wicker"], state.material, "material", function (item) { return item; }) +
@@ -1120,7 +1135,7 @@ DATA.trustPoints
         }).join("") +
         "</div>";
 
-      var activeCategory = state.category !== "all" ? categories.find(function(c) { return c.slug === state.category; }) : null;
+      var activeCategory = state.category !== "all" ? categories.find(function (c) { return c.slug === state.category; }) : null;
 
       content.innerHTML =
         '<section class="section" style="padding-bottom:14px;">' +
@@ -1173,7 +1188,7 @@ DATA.trustPoints
         '        <p style="font-size:20px;font-weight:800;margin:0;">Filters</p>' +
         '        <button class="circle-button" type="button" data-close-shop-filters="true">✕</button>' +
         "      </div>" +
-               renderShopFilters() +
+        renderShopFilters() +
         "    </div>" +
         "  </div>" +
         "</section>" +
@@ -1423,11 +1438,10 @@ DATA.trustPoints
         '  <div class="container">' +
         '    <div class="breadcrumbs"><a href="index.html">Home</a> / <a href="' + DATA.categoryUrl(product.categorySlug) + '">' + escapeHtml(product.categoryName) + "</a> / <strong style=\"color:var(--brand-text);\">" + escapeHtml(product.name) + "</strong></div>" +
         '    <div class="product-layout">' +
-        '      <div class="surface product-gallery">' +
+        '      <div class="product-gallery">' +
         '        <div class="product-hero-media">' +
-          '          <span class="sale-badges"><span class="badge badge-red">' + escapeHtml(product.discountPercentage + "% OFF") + "</span></span>" +
-          '          <img id="product-main-image" src="' + activeImage + '" alt="' + escapeHtml(product.name) + '">' +
-        '          <span class="product-image-hint">Hover image to inspect details</span>' +
+        '          <span class="sale-badges" style="position:absolute;top:10px;left:10px;background:#388e3c;color:#fff;padding:2px 8px;font-size:12px;font-weight:700;border-radius:2px;">' + escapeHtml(product.discountPercentage + "% OFF") + "</span>" +
+        '          <img id="product-main-image" src="' + activeImage + '" alt="' + escapeHtml(product.name) + '">' +
         "        </div>" +
         '        <div class="thumb-grid">' +
         product.images
@@ -1441,11 +1455,18 @@ DATA.trustPoints
           .join("") +
         "        </div>" +
         "      </div>" +
-        '      <div class="surface product-info">' +
-        '        <div class="badge-row"><span class="badge badge-blue">' + escapeHtml(product.categoryName) + '</span><span class="badge badge-green">' + escapeHtml(product.availability) + "</span></div>" +
-        '        <h1 class="section-title" style="font-size:64px;margin-top:18px;">' + escapeHtml(product.name) + "</h1>" +
-        '        <p class="section-subtitle">' + escapeHtml(product.marketingCopy) + "</p>" +
-        '        <div class="product-price"><span class="price-current">' + DATA.formatCurrency(product.price) + '</span><span class="price-original">' + DATA.formatCurrency(product.originalPrice) + '</span><span class="badge badge-green">You save ' + DATA.formatCurrency(product.originalPrice - product.price) + "</span></div>" +
+        '      <div class="product-info">' +
+        '        <div class="badge-row" style="margin-bottom:8px;"><span style="color:#878787;font-size:12px;text-transform:uppercase;font-weight:700;letter-spacing:0.5px;">' + escapeHtml(product.categoryName) + '</span></div>' +
+        '        <h1 class="section-title" style="font-size:22px;font-weight:400;color:#212121;margin:0 0 16px;">' + escapeHtml(product.name) + "</h1>" +
+        '        <div class="rating-row" style="margin-bottom:16px;">' +
+        '          <span style="background:#388e3c;color:#fff;padding:2px 6px;border-radius:3px;font-size:12px;font-weight:700;display:inline-flex;align-items:center;">' + escapeHtml(String(product.rating)) + " ★</span>" +
+        '          <span style="color:#878787;font-size:14px;font-weight:700;margin-left:8px;">' + escapeHtml(String(product.reviewCount)) + " Ratings & Reviews</span>" +
+        '        </div>' +
+        '        <div class="product-price" style="display:flex;align-items:baseline;gap:12px;margin-bottom:24px;">' +
+        '          <span class="price-current" style="font-size:28px;font-weight:700;color:#212121;">' + DATA.formatCurrency(product.price) + '</span>' +
+        '          <span class="price-original" style="font-size:16px;color:#878787;text-decoration:line-through;">' + DATA.formatCurrency(product.originalPrice) + '</span>' +
+        '          <span class="badge badge-green" style="font-size:16px;font-weight:700;color:#388e3c;background:none;padding:0;">' + escapeHtml(String(product.discountPercentage)) + "% off</span>" +
+        '        </div>' +
         '        <div class="info-grid">' +
         [
           { label: "Material", value: product.material },
@@ -1459,11 +1480,9 @@ DATA.trustPoints
           })
           .join("") +
         "        </div>" +
-        '        <div class="product-actions" style="grid-template-columns:repeat(2,minmax(0,1fr));">' +
-        '          <a class="btn btn-green" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber, product.name) + '" target="_blank" rel="noreferrer">WhatsApp Now</a>' +
-        '          <a class="btn btn-blue" href="' + DATA.buildPhoneLink(DATA.siteConfig.phone) + '">Call Now</a>' +
-        '          <a class="btn btn-outline" href="' + DATA.buildEmailLink(DATA.siteConfig.email, product.name) + '">📧 Email</a>' +
-        '          <a class="btn btn-outline" href="' + DATA.siteConfig.catalogPdf + '" target="_blank" rel="noreferrer">📥 Download Catalog</a>' +
+        '        <div class="product-actions" style="display:flex;gap:16px;margin-top:32px;">' +
+        '          <a class="btn btn-primary" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber, product.name) + '" target="_blank" rel="noreferrer" style="flex:1;text-align:center;font-size:16px;padding:14px;background:#ff9f00;color:#fff;">WhatsApp Now</a>' +
+        '          <a class="btn btn-orange" href="' + DATA.buildPhoneLink(DATA.siteConfig.phone) + '" style="flex:1;text-align:center;font-size:16px;padding:14px;background:#fb641b;color:#fff;">Call Now</a>' +
         "        </div>" +
         '        <div class="highlights"><p class="eyebrow" style="margin:0;color:var(--brand-muted);">Product Highlights</p><ul class="highlight-list">' +
         product.highlights
@@ -1474,7 +1493,7 @@ DATA.trustPoints
         "</ul></div>" +
         "      </div>" +
         "    </div>" +
-        '    <div class="surface tab-shell" style="margin-top:28px;">' +
+        '    <div class="tab-shell" style="margin-top:28px;">' +
         '      <div class="tabs">' +
         ["Description", "Specifications", "Shipping info", "FAQ"]
           .map(function (tab) {
@@ -1560,15 +1579,15 @@ DATA.trustPoints
     return '<div class="card-stack"><p class="card-copy" style="margin-top:0;">' + escapeHtml(product.description) + "</p><p class=\"card-copy\">" + escapeHtml(product.marketingCopy) + "</p></div>";
   }
 
- function renderAboutPage() {
-  setMeta("About | SUN SEATINGS", "Learn about the SUN SEATINGS brand, luxury positioning and quotation-first customer experience.");
-  content.innerHTML =
-    '<section class="section"><div class="container"><div class="two-col">' +
-    '  <div class="surface card">' +
-    '    <p class="eyebrow">About Brand</p>' +
-    '    <h1 class="section-title">A premium outdoor furniture brand for modern Indian living.</h1>' +
+  function renderAboutPage() {
+    setMeta("About | SUN SEATINGS", "Learn about the SUN SEATINGS brand, luxury positioning and quotation-first customer experience.");
+    content.innerHTML =
+      '<section class="section"><div class="container"><div class="two-col">' +
+      '  <div class="surface card">' +
+      '    <p class="eyebrow">About Brand</p>' +
+      '    <h1 class="section-title">A premium outdoor furniture brand for modern Indian living.</h1>' +
 
-    `    <p class="section-subtitle">
+      `    <p class="section-subtitle">
 Sun Seatings creates thoughtfully designed outdoor furniture built for India’s climate and lifestyle. From poolside loungers to garden and terrace seating, every piece is made to offer lasting comfort, durability, and clean, contemporary design.
 
 We combine strong materials with refined finishes to deliver furniture that looks elegant and performs effortlessly in outdoor conditions. Whether it’s a home, café, or hospitality space, our collections are made to elevate everyday outdoor living.
@@ -1576,21 +1595,21 @@ We combine strong materials with refined finishes to deliver furniture that look
 At Sun Seatings, we focus on quality you can rely on, designs that feel current, and a buying experience that is simple, transparent, and dependable.
 </p>` +
 
-    '    <p class="credit-line">Website designed by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a>, a digital experience studio.</p>' +
+      '    <p class="credit-line">Website designed by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a>, a digital experience studio.</p>' +
 
-    '  </div>' +
-    '  <div class="surface card"><div class="grid grid-2">' +
-    [
-      ["Luxury-first", "Elevated brand expression with high-conversion ecommerce patterns."],
-      ["Project-ready", "Made for homeowners, cafes, villas, resorts and architects."]
-    ]
-      .map(function (item) {
-        return '<div class="trust-card"><h3 class="card-title" style="margin-top:0;font-size:24px;">' + item[0] + '</h3><p class="card-copy">' + item[1] + "</p></div>";
-      })
-      .join("") +
-    "  </div></div>" +
-    "</div></div></section>";
-}
+      '  </div>' +
+      '  <div class="surface card"><div class="grid grid-2">' +
+      [
+        ["Luxury-first", "Elevated brand expression with high-conversion ecommerce patterns."],
+        ["Project-ready", "Made for homeowners, cafes, villas, resorts and architects."]
+      ]
+        .map(function (item) {
+          return '<div class="trust-card"><h3 class="card-title" style="margin-top:0;font-size:24px;">' + item[0] + '</h3><p class="card-copy">' + item[1] + "</p></div>";
+        })
+        .join("") +
+      "  </div></div>" +
+      "</div></div></section>";
+  }
 
   function renderContactPage() {
     setMeta("Contact | SUN SEATINGS", "Send a product enquiry, request quotation, call or start a WhatsApp conversation with SUN SEATINGS.");
@@ -1607,11 +1626,11 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
       "      </div>" +
       enquiryFormMarkup({ type: "general", title: "General enquiry form" }) +
 
-'  <p class="credit-line" style="margin-top:20px;">Website by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a></p>' +
+      '  <p class="credit-line" style="margin-top:20px;">Website by <a href="https://nexvoraweb.in" target="_blank" rel="noopener noreferrer">NexvoraWeb</a></p>' +
 
-"    </div>" +
-"  </div>" +
-"</section>";
+      "    </div>" +
+      "  </div>" +
+      "</section>";
     bindEnquiryForms(content);
   }
 
@@ -1644,32 +1663,40 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
     setMeta("Blog | SUN SEATINGS", "SEO-ready blog for SUN SEATINGS covering outdoor furniture buying guides, styling and trends.");
 
     content.innerHTML =
-      '<section class="section"><div class="container">' +
-      '  <div class="surface page-hero"><p class="eyebrow">Blog / SEO Engine</p><h1 class="section-title">Design stories and search-friendly buying guides.</h1></div>' +
-      '  <div class="grid grid-3" style="margin-top:24px;">' +
+      '<section class="section" style="background:#fff;padding:40px 0;border-bottom:1px solid #f0f0f0;">' +
+      '  <div class="container">' +
+      '    <div class="section-heading"><p class="eyebrow" style="color:#2874f0;">Design Journal</p><h1 class="section-title" style="font-size:32px;font-weight:600;color:#212121;">Buying guides & outdoor trends.</h1></div>' +
+      '  </div>' +
+      "</section>" +
+      '<section class="section" style="background:#f1f3f6;padding:40px 0;">' +
+      '  <div class="container">' +
+      '    <div class="grid grid-3">' +
       posts
         .map(function (post) {
           return (
-            '<article class="surface card">' +
-            '  <div class="blog-card-media" style="height:260px;"><img src="' + post.featuredImage + '" alt="' + escapeHtml(post.title) + '" style="height:260px;padding:22px;"></div>' +
-            '  <div class="blog-card-body">' +
-            '    <div class="badge-row">' +
+            '<article class="trust-card" style="padding:0;overflow:hidden;display:flex;flex-direction:column;cursor:pointer;" onclick="window.location.href=\'' + DATA.blogPostUrl(post.slug) + '\'">' +
+            '  <div class="blog-card-media" style="height:220px;background:#fff;"><img src="' + post.featuredImage + '" alt="' + escapeHtml(post.title) + '" style="width:100%;height:100%;object-fit:cover;"></div>' +
+            '  <div class="blog-card-body" style="padding:20px;flex:1;display:flex;flex-direction:column;">' +
+            '    <div class="badge-row" style="margin-bottom:12px;">' +
             post.tags
               .map(function (tag) {
-                return '<span class="badge badge-blue">' + escapeHtml(tag) + "</span>";
+                return '<span style="background:#f0f5ff;color:#2874f0;padding:2px 8px;border-radius:2px;font-size:11px;font-weight:700;text-transform:uppercase;">' + escapeHtml(tag) + "</span>";
               })
               .join("") +
             "    </div>" +
-            '    <h2 class="card-title">' + escapeHtml(post.title) + "</h2>" +
-            '    <p class="card-copy">' + escapeHtml(post.excerpt) + "</p>" +
-            '    <a class="eyebrow" style="margin-top:16px;display:inline-flex;" href="' + DATA.blogPostUrl(post.slug) + '">Read article</a>' +
-            "  </div>" +
+            '    <h2 style="margin:0;font-size:18px;font-weight:700;color:#212121;line-height:1.4;">' + escapeHtml(post.title) + "</h2>" +
+            '    <p style="margin:12px 0;font-size:13px;color:#878787;line-height:1.6;flex:1;">' + escapeHtml(post.excerpt) + "</p>" +
+            '    <div style="margin-top:auto;padding-top:16px;border-top:1px solid #f0f0f0;">' +
+            '      <span style="color:#2874f0;font-size:13px;font-weight:700;">Read article →</span>' +
+            '    </div>' +
+            '  </div>' +
             "</article>"
           );
         })
         .join("") +
+      "    </div>" +
       "  </div>" +
-      "</div></section>";
+      "</section>";
   }
 
   function renderBlogPostPage() {
@@ -1684,22 +1711,33 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
     setMeta(post.seoTitle || post.title, post.seoDescription || post.excerpt);
 
     content.innerHTML =
-      '<section class="section"><div class="container">' +
-      '  <article class="surface card" style="max-width:980px;margin:0 auto;">' +
-      '    <div class="blog-card-media" style="height:340px;"><img src="' + post.featuredImage + '" alt="' + escapeHtml(post.title) + '" style="height:340px;padding:28px;"></div>' +
-      '    <p class="eyebrow" style="margin-top:24px;">' + DATA.formatDate(post.publishedAt) + "</p>" +
-      '    <h1 class="section-title">' + escapeHtml(post.title) + "</h1>" +
-      '    <p class="section-subtitle">' + escapeHtml(post.excerpt) + "</p>" +
-      '    <div class="badge-row" style="margin-top:18px;">' +
-      post.tags
-        .map(function (tag) {
-          return '<span class="badge badge-blue">' + escapeHtml(tag) + "</span>";
-        })
-        .join("") +
+      '<section class="section" style="background:#fff;padding:40px 0;border-bottom:1px solid #f0f0f0;">' +
+      '  <div class="container" style="max-width:800px;">' +
+      '    <div style="margin-bottom:20px;display:flex;align-items:center;gap:12px;">' +
+      '      <span style="color:#2874f0;font-size:12px;font-weight:700;text-transform:uppercase;">' + escapeHtml(post.tags[0]) + "</span>" +
+      '      <span style="color:#878787;font-size:12px;">•</span>' +
+      '      <span style="color:#878787;font-size:12px;">' + DATA.formatDate(post.publishedAt) + "</span>" +
       "    </div>" +
-      '    <div class="rich-text" style="margin-top:24px;">' + formatRichText(post.body) + "</div>" +
-      "  </article>" +
-      "</div></section>";
+      '    <h1 style="margin:0;font-size:36px;font-weight:700;color:#212121;line-height:1.2;">' + escapeHtml(post.title) + "</h1>" +
+      '    <p style="margin:20px 0 0;font-size:18px;color:#878787;line-height:1.6;">' + escapeHtml(post.excerpt) + "</p>" +
+      "  </div>" +
+      "</section>" +
+      '<section class="section" style="background:#f9f9f9;padding:40px 0;">' +
+      '  <div class="container" style="max-width:800px;">' +
+      '    <article style="background:#fff;border:1px solid #f0f0f0;border-radius:4px;padding:40px;box-shadow:0 1px 4px rgba(0,0,0,0.04);">' +
+      '      <div style="margin-bottom:40px;border-radius:4px;overflow:hidden;height:400px;background:#f1f3f6;"><img src="' + post.featuredImage + '" alt="' + escapeHtml(post.title) + '" style="width:100%;height:100%;object-fit:cover;"></div>' +
+      '      <div class="rich-text" style="font-size:16px;line-height:1.8;color:#212121;">' + formatRichText(post.body) + "</div>" +
+      '      <div style="margin-top:40px;padding-top:24px;border-top:1px solid #f0f0f0;display:flex;align-items:center;gap:16px;">' +
+      '        <div style="width:48px;height:48px;border-radius:50%;background:#f0f5ff;display:flex;align-items:center;justify-content:center;color:#2874f0;font-weight:700;">SS</div>' +
+      '        <div>' +
+      '          <p style="margin:0;font-weight:700;color:#212121;">Sun Seatings Editorial</p>' +
+      '          <p style="margin:2px 0 0;font-size:13px;color:#878787;">Premium outdoor furniture experts</p>' +
+      "        </div>" +
+      "      </div>" +
+      '      <div style="margin-top:40px;text-align:center;"><a class="btn btn-outline" href="blog.html">← Back to Design Journal</a></div>' +
+      "    </article>" +
+      "  </div>" +
+      "</section>";
   }
 
   function renderNotFound(message) {
