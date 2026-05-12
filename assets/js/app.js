@@ -1791,4 +1791,3 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
   mountSiteLoader();
   initializePage();
 })(); tializePage();
-}) ();
