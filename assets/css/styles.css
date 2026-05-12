@@ -1514,13 +1514,13 @@ button {
   border-radius: 4px;
   border: 1px solid #f0f0f0;
   background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .trust-card:hover,
 .stat-card:hover {
-  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
   transform: translateY(-2px);
 }
 
@@ -2365,7 +2365,8 @@ button {
   border-bottom-color: var(--brand-blue);
   color: var(--brand-blue);
 }
-  font-weight: 800;
+
+font-weight: 800;
 }
 
 .tab-button.is-active {
@@ -4078,7 +4079,8 @@ button {
   margin-bottom: 24px;
 }
 
-.rich-text h2, .rich-text h3 {
+.rich-text h2,
+.rich-text h3 {
   margin: 32px 0 16px;
   color: #212121;
 }
@@ -4096,7 +4098,8 @@ button {
   }
 
   /* Force 2 columns for grid-4 and grid-3 on tablets/large phones */
-  .grid-4, .grid-3 {
+  .grid-4,
+  .grid-3 {
     grid-template-columns: repeat(2, 1fr) !important;
     gap: 12px !important;
   }
@@ -4128,7 +4131,8 @@ button {
     right: 20px;
     display: flex;
     flex-direction: column;
-    gap: 16px; /* More gap */
+    gap: 16px;
+    /* More gap */
     z-index: 9999;
   }
 
@@ -4140,7 +4144,7 @@ button {
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transition: transform 0.2s ease;
   }
 
@@ -4159,16 +4163,20 @@ button {
 }
 
 @media (max-width: 480px) {
+
   /* On very small screens, 1 column for main grids unless specified */
-  .grid-4, .grid-3 {
-    grid-template-columns: repeat(2, 1fr) !important; /* Keep 2/2 as requested */
+  .grid-4,
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr) !important;
+    /* Keep 2/2 as requested */
   }
-  
+
   .section-title {
     font-size: 22px !important;
   }
 
   .promo-grid-mobile .grid-2 {
-    grid-template-columns: repeat(2, 1fr) !important; /* Keep 2/2 for the small cards in promo */
+    grid-template-columns: repeat(2, 1fr) !important;
+    /* Keep 2/2 for the small cards in promo */
   }
 }
