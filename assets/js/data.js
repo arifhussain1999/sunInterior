@@ -124,7 +124,7 @@
   }
 
   function blogPostUrl(slug) {
-    return "blog-post.html?slug=" + encodeURIComponent(slug);
+    return encodeURIComponent(slug) + ".html";
   }
 
   function catalogPdfUrl() {
@@ -870,50 +870,15 @@
     {
       id: "blog_1",
       origin: "seed",
-      title: "How to choose luxury outdoor furniture for Indian weather",
-      slug: "choose-outdoor-furniture-indian-weather",
-      excerpt:
-        "A practical guide to selecting weather-ready wicker, cushions and finishes without compromising on style.",
-      body:
-        "Luxury outdoor furniture should look refined, but it also needs to withstand heat, humidity and regular use.\n\nStart with an all-weather frame, ask for UV-ready weave quality and check if cushions are designed for faster drying. For terraces and rooftops, modular sofa sets and compact coffee sets usually deliver the best layout flexibility.\n\nFor hospitality projects, dining collections and loungers should balance comfort with easy maintenance. SUN SEATINGS recommends choosing by space usage first, then by finish, then by quotation lead time.",
-      featuredImage: assetPath("Sofa Sets", "Cascade.png"),
-      tags: ["Outdoor Furniture", "Buying Guide", "Luxury Living"],
-      publishedAt: "2026-03-14T09:00:00.000Z",
-      seoTitle: "How to choose luxury outdoor furniture in India | SUN SEATINGS",
-      seoDescription:
-        "Learn how to choose outdoor furniture for Indian weather, from wicker quality and cushions to layouts and maintenance."
-    },
-    {
-      id: "blog_2",
-      origin: "seed",
-      title: "Outdoor dining set ideas for terraces, lawns and cafes",
-      slug: "outdoor-dining-set-ideas",
-      excerpt:
-        "See how to style outdoor dining collections for homes, hospitality projects and compact entertaining spaces.",
-      body:
-        "Outdoor dining should feel effortless.\n\nFour-seater sets work beautifully for balconies and compact terraces, while six-seater formats suit lawns and weekend hosting. Layer umbrellas for shade, choose material palettes that complement surrounding flooring and make sure table surfaces are easy to clean.\n\nFor cafes and project work, stackable or low-maintenance frames are a practical win. The right dining set turns underused space into a destination for everyday living.",
-      featuredImage: assetPath("Dining Sets", "WW-43 (6 chair + 1 table)s.png"),
-      tags: ["Dining Sets", "Outdoor Styling", "Hospitality"],
-      publishedAt: "2026-03-18T09:00:00.000Z",
-      seoTitle: "Outdoor dining set ideas for terraces and cafes | SUN SEATINGS",
-      seoDescription:
-        "Explore layout and styling ideas for luxury outdoor dining collections across homes, lawns and commercial spaces."
-    },
-    {
-      id: "blog_3",
-      origin: "seed",
-      title: "Why hanging swings are the statement piece of 2026",
-      slug: "hanging-swings-statement-piece-2026",
-      excerpt:
-        "Designer swings are reshaping outdoor corners, lounge spaces and even indoor reading nooks.",
-      body:
-        "Few pieces add personality as quickly as a sculptural swing.\n\nThey photograph beautifully, create a defined relaxation spot and bring softness to architectural outdoor settings. When selecting one, check the base stability, the comfort of the seat cushion and the clearance needed around the frame.\n\nNeutral wicker tones keep the look versatile, while bold cushions help the swing act as a focal point.",
-      featuredImage: assetPath("Swings", "Saturn.png"),
-      tags: ["Swings", "Trends", "Luxury Decor"],
-      publishedAt: "2026-03-22T09:00:00.000Z",
-      seoTitle: "Hanging swing design trend 2026 | SUN SEATINGS",
-      seoDescription:
-        "Discover why hanging swings are becoming a statement piece for luxury terraces, patios and indoor-outdoor spaces."
+      title: "Quiet Luxury Outdoors: How to Design a Climate-Resistant Terrace in India",
+      slug: "quiet-luxury-outdoor-furniture-india",
+      excerpt: "Discover how to blend the 'Quiet Luxury' aesthetic with high-performance, climate-resistant materials to create an all-weather outdoor lounge that survives Indian monsoons and intense summers.",
+      body: "The landscape of outdoor living in India is experiencing a profound shift. The traditional concept of a simple balcony or open lawn is being reimagined as a 'second living room'—a seamless transition where the comfort of indoor spaces meets the open-air freedom of the outdoors.\n\nAt the center of this revolution is 'Quiet Luxury.' Moving away from flashy accents, this design philosophy values tactile textures, warm neutral tones, organic curves, and exceptional longevity. However, designing a luxurious terrace in India requires more than just aesthetics; it demands materials that can survive the intense UV rays of Delhi NCR summers, coastal humidity in Mumbai, and torrential monsoons across the country.\n\nTo achieve quiet luxury that lasts, material integrity is non-negotiable. Look for high-performance specifications that stand up to weather extremes: High-tenacity rope, powder-coated aluminum frames, and all-weather synthetic rattan. Rope outdoor furniture uses UV-stabilized, weather-resistant fibers wrapped around robust frames to create a tactile, airy feel. For structural frames, powder-coated aluminum is the gold standard since it is rust-proof, lightweight, and does not retain intense heat. Ensure seat cushions feature quick-dry foam and performance fabrics that dry quickly after monsoons.\n\nDifferent outdoor spaces call for distinct layout strategies. For private balconies and verandas, compact coffee sets or a statement hanging swing create an instant relaxation nook. For expansive terraces and patios, a modular L-shaped sofa set from our Rope Collection acts as a cozy social anchor. For hosting dinner parties, premium dining sets with easy-clean glass or solid surfaces offer the perfect balance of durability and resort-style comfort.\n\nWhile premium outdoor furniture is built for all-weather conditions, simple care routines will maximize its life. During peak monsoons, we recommend using protective weather covers when the furniture is not in use. Regularly dust metal frames and handwoven details with a soft brush to prevent monsoon humidity from bonding dust to the surface textures.\n\nReady to elevate your outdoor space? Explore the SUN SEATINGS collection to discover custom outdoor furniture designed for the modern Indian home. Connect with our styling experts on WhatsApp to request custom pricing, finishes, and dimensions.",
+      featuredImage: assetPath("Rope", "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream).png"),
+      tags: ["Outdoor Living", "Buying Guide", "Luxury Trends"],
+      publishedAt: "2026-06-04T12:00:00.000Z",
+      seoTitle: "Quiet Luxury Outdoor Furniture India | SUN SEATINGS",
+      seoDescription: "A comprehensive buying guide to designing a climate-resistant luxury terrace in India using quiet luxury aesthetics, high-performance rope, and all-weather finishes."
     }
   ];
 

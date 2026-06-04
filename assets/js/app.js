@@ -1700,7 +1700,7 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
   }
 
   function renderBlogPostPage() {
-    var slug = getParam("slug") || DATA.blogPosts[0].slug;
+    var slug = document.body.dataset.postSlug || getParam("slug") || DATA.blogPosts[0].slug;
     var post = STORE.getBlogPostBySlug(slug);
 
     if (!post) {
@@ -1790,4 +1790,4 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
 
   mountSiteLoader();
   initializePage();
-})(); tializePage();
+})();
