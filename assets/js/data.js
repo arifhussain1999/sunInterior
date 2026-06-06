@@ -890,6 +890,33 @@
     "garden umbrella"
   ];
 
+  var localFaqs = [
+    {
+      question: "Where is the Sun Seatings outdoor furniture showroom located in Siliguri?",
+      answer: "Our premium outdoor furniture studio is located at PCM Tower, Sevoke Road, Siliguri 734001. It is the leading showroom in North Bengal for luxury garden furniture, balcony swings, and patio sofa sets. If you are searching for the best furniture store near Sevoke Road, you can visit us or call us for a direct showroom walkthrough."
+    },
+    {
+      question: "Does Sun Seatings deliver outdoor and balcony furniture to Sikkim, Darjeeling, and other North Bengal locations?",
+      answer: "Yes, we provide reliable delivery and installation services across Siliguri, Darjeeling, Kalimpong, Gangtok (Sikkim), Jalpaiguri, Cooch Behar, and all neighboring regions of North Bengal. We specialize in transporting all-weather wicker sofas, loungers, and hanging swings safely to hilly terrains and resort project sites."
+    },
+    {
+      question: "Why is Sun Seatings the best choice for outdoor furniture in Siliguri's weather conditions?",
+      answer: "Siliguri and the surrounding North Bengal/Sikkim region experience heavy monsoon rains, high humidity, and intense summer sun. Sun Seatings furniture is specifically crafted to handle these extreme weather conditions. We use high-density, UV-stabilized PE rattan, powder-coated rust-proof aluminum frames, and water-repellent, quick-dry cushion fabrics, making our patio furniture exceptionally durable and weather-resistant."
+    },
+    {
+      question: "Can I get customized balcony or terrace furniture for my home or cafe in Siliguri?",
+      answer: "Absolutely! We work closely with homeowners, hospitality developers, and interior designers in Siliguri to customize seating capacities, rope weaving patterns, fabric colors, and sizes. Whether you need a compact coffee set for a residential balcony on Sevoke Road or a large dining layout for a resort in Darjeeling, we can customize a solution for you."
+    },
+    {
+      question: "How can I request a project quotation or catalog PDF for bulk furniture orders in Siliguri?",
+      answer: "You can download our digital catalog PDF directly from the website or request a custom project quotation. For instant assistance, click the WhatsApp button to connect with our showroom manager in Siliguri, or fill out the enquiry form on our Contact Page. We typically respond with pricing, delivery timelines, and design advice within 24 hours."
+    },
+    {
+      question: "What types of furniture products can I experience at the Siliguri showroom?",
+      answer: "At our Sevoke Road showroom, you can explore a curated range of outdoor sofa sets, space-saving balcony coffee sets, all-weather dining tables, designer hanging swings, poolside loungers, and wind-stable garden umbrellas. We offer the premium 'wicker and weave' look that adds quiet luxury to private residences, hotels, and cafes."
+    }
+  ];
+
   window.WW_DATA = {
     siteConfig: siteConfig,
     categories: categories,
@@ -901,6 +928,7 @@
     banners: seedBanners,
     blogPosts: blogPosts,
     popularSearches: popularSearches,
+    localFaqs: localFaqs,
     slugify: slugify,
     assetPath: assetPath,
     cleanProductName: cleanProductName,

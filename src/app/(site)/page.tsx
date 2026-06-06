@@ -4,7 +4,7 @@ import Link from "next/link";
 import { FeaturedCarousel } from "@/components/featured-carousel";
 import { HeroCarousel } from "@/components/hero-carousel";
 import { ReviewSlider } from "@/components/review-slider";
-import { categories as seedCategories, heroSlides, instagramShots, siteConfig, testimonials, trustPoints } from "@/data/catalog";
+import { categories as seedCategories, heroSlides, instagramShots, siteConfig, testimonials, trustPoints, localFaqs } from "@/data/catalog";
 import { ArrowRightIcon, ShieldIcon, SparklesIcon, TruckIcon, WhatsappIcon } from "@/components/icons";
 import { buildWhatsAppLink } from "@/lib/utils";
 import { getAllProducts, getFeaturedProducts } from "@/lib/store";
@@ -206,6 +206,44 @@ export default async function HomePage() {
                 </div>
                 <p className="mt-4 text-sm font-semibold text-[#1f2937]">{shot.caption}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="section-space pt-0">
+        <div className="container-shell">
+          <div className="mb-8 rounded-[38px] bg-white p-8 shadow-card sm:p-10">
+            <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#2874F0]">
+              Siliguri Showroom
+            </p>
+            <h2 className="mt-3 font-[var(--font-heading)] text-4xl font-semibold text-[#1f2937] sm:text-5xl">
+              Siliguri Outdoor Furniture FAQ
+            </h2>
+            <p className="mt-4 text-sm leading-7 text-[#6b7280] max-w-2xl">
+              Find answers about our Sevoke Road showroom address, customization options, weather durability, and delivery across North Bengal and Sikkim.
+            </p>
+          </div>
+
+          <div className="space-y-4">
+            {localFaqs.map((faq, idx) => (
+              <details
+                className="group border border-slate-200 rounded-[28px] bg-[#f8fbff] p-6 transition-all duration-300 [&_summary::-webkit-details-marker]:hidden cursor-pointer"
+                key={idx}
+              >
+                <summary className="flex items-center justify-between gap-4 focus:outline-none select-none">
+                  <h3 className="text-base font-semibold text-[#1f2937] sm:text-lg">
+                    {faq.question}
+                  </h3>
+                  <span className="relative h-5 w-5 shrink-0 flex items-center justify-center">
+                    <span className="absolute h-[2px] w-4 bg-[#2874F0] transition-transform duration-300 group-open:rotate-90" />
+                    <span className="absolute h-4 w-[2px] bg-[#2874F0] transition-transform duration-300 group-open:opacity-0" />
+                  </span>
+                </summary>
+                <div className="mt-4 text-sm leading-7 text-[#6b7280] border-t border-slate-200/60 pt-4">
+                  {faq.answer}
+                </div>
+              </details>
             ))}
           </div>
         </div>

@@ -943,6 +943,32 @@ Crafted for comfort.
         .join("") +
       "    </div>" +
       "  </div>" +
+      "</section>" +
+      '<section class="section" style="padding-bottom: 20px;">' +
+      '  <div class="container">' +
+      '    <div class="surface card" style="margin-bottom: 30px; padding: 40px; border-radius: 28px; border: 1px solid #f0f0f0; background: #fff;">' +
+      '      <p class="eyebrow" style="color: #2874f0; margin: 0; font-weight: 700; text-transform: uppercase; letter-spacing: 0.35em; font-size: 11px;">Siliguri Showroom</p>' +
+      '      <h2 class="section-title" style="margin: 12px 0 0; font-size: 32px; font-weight: 600; color: #212121;">Siliguri Outdoor Furniture FAQ</h2>' +
+      '      <p style="margin: 16px 0 0; font-size: 14px; color: #666; line-height: 1.6; max-width: 600px;">Find answers about our Sevoke Road showroom address, customization options, weather durability, and delivery across North Bengal and Sikkim.</p>' +
+      '    </div>' +
+      '    <div style="display: flex; flex-direction: column; gap: 16px;">' +
+      DATA.localFaqs
+        .map(function (faq) {
+          return (
+            '<details class="local-faq-details">' +
+            '  <summary>' +
+            '    <span>' + escapeHtml(faq.question) + '</span>' +
+            '    <span class="faq-icon"></span>' +
+            '  </summary>' +
+            '  <div class="faq-answer">' +
+            escapeHtml(faq.answer) +
+            '  </div>' +
+            '</details>'
+          );
+        })
+        .join("") +
+      '    </div>' +
+      '  </div>' +
       "</section>";
 
     bindCommonProductActions(content);

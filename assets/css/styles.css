@@ -4180,3 +4180,50 @@ font-weight: 800;
     /* Keep 2/2 for the small cards in promo */
   }
 }
+
+/* Local FAQ Details Styling */
+.local-faq-details {
+  border: 1px solid rgba(226, 232, 240, 0.85);
+  border-radius: 28px;
+  background: #f8fbff;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.local-faq-details summary::-webkit-details-marker {
+  display: none !important;
+}
+
+.local-faq-details summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-weight: 700;
+  color: #1f2937;
+  list-style: none;
+  outline: none;
+  user-select: none;
+}
+
+.local-faq-details .faq-icon::before {
+  content: "+";
+  color: #2874f0;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.local-faq-details[open] .faq-icon::before {
+  content: "−";
+}
+
+.local-faq-details .faq-answer {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.6;
+  border-top: 1px solid rgba(226, 232, 240, 0.6);
+  padding-top: 16px;
+  cursor: default;
+}
