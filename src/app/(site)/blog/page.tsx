@@ -5,8 +5,9 @@ import { Metadata } from "next";
 import { getAllBlogPosts } from "@/lib/store";
 
 export const metadata: Metadata = {
-  title: "Furniture Blog",
-  description: "SEO-ready blog for SUN SEATINGS covering outdoor furniture buying guides, styling and trends."
+  title: "Furniture Blog | Sun Seatings Siliguri, West Bengal",
+  description: "SEO-ready blog for SUN SEATINGS covering outdoor furniture buying guides, styling, and trends in Siliguri, West Bengal.",
+  keywords: ["outdoor furniture blog Siliguri", "luxury furniture West Bengal", "Siliguri furniture trends"]
 };
 
 export default async function BlogPage() {

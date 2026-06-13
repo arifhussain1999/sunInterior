@@ -3,7 +3,7 @@ import type { MetadataRoute } from "next";
 import { categories, products, seedBlogPosts } from "@/data/catalog";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://sunseatings.in";
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sunseatings.com";
 
   const staticRoutes = ["", "/shop", "/categories", "/about", "/contact", "/catalog", "/blog", "/admin/login"];
 

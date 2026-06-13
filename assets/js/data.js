@@ -669,10 +669,10 @@
   var heroSlides = [
     {
       id: "hero_1",
-      eyebrow: "Quiet Luxury Living",
-      title: "Designer comfort that makes the room feel instantly elevated.",
+      eyebrow: "Quiet Luxury Living in Siliguri, West Bengal",
+      title: "Designer outdoor furniture in Siliguri, West Bengal.",
       subtitle:
-        "Explore refined sofas, lounge furniture and statement pieces presented like a private showroom, with enquiry-first buying made simple.",
+        "Explore refined sofas, lounge furniture and statement pieces presented at our Siliguri showroom, with enquiry-first buying made simple.",
       image: heroAsset("premium-living-4.png"),
       ctaPrimary: { label: "Explore Collection", href: "shop.html" },
       ctaSecondary: { label: "Request Quote", href: "contact.html" },
@@ -696,8 +696,8 @@
     },
     {
       id: "hero_2",
-      eyebrow: "Modern Interior Story",
-      title: "Furniture styled like a premium editorial spread, ready for your space.",
+      eyebrow: "Modern Interior Story in Siliguri",
+      title: "Furniture styled like a premium editorial spread, ready for your West Bengal home.",
       subtitle:
         "A cleaner catalog experience for buyers who want strong visuals, clear details and fast support on WhatsApp, call or quotation.",
       image: heroAsset("premium-living-1.avif"),
@@ -723,8 +723,8 @@
     },
     {
       id: "hero_3",
-      eyebrow: "Architectural Comfort",
-      title: "Spaces that feel layered, tactile and quietly luxurious.",
+      eyebrow: "Architectural Comfort for North Bengal",
+      title: "Spaces that feel layered, tactile and quietly luxurious across Siliguri and West Bengal.",
       subtitle:
         "From sofa statements to dining and lounge pieces, discover a catalog crafted to look more like a luxury brand campaign than a generic grid.",
       image: heroAsset("premium-living-2.avif"),
@@ -750,8 +750,8 @@
     },
     {
       id: "hero_4",
-      eyebrow: "Curated Catalogue Experience",
-      title: "A full-width premium banner that moves like a luxury storefront.",
+      eyebrow: "Curated Catalogue Experience in Siliguri",
+      title: "Siliguri's premium outdoor furniture collection moving like a luxury storefront.",
       subtitle:
         "The hero now side-slides automatically, holds focus on full-size imagery and keeps quotation, WhatsApp and catalog access close to the first interaction.",
       image: heroAsset("premium-living-3.avif"),
@@ -868,19 +868,6 @@
 
   var blogPosts = [
     {
-      id: "blog_1",
-      origin: "seed",
-      title: "Quiet Luxury Outdoors: How to Design a Climate-Resistant Terrace in India",
-      slug: "quiet-luxury-outdoor-furniture-india",
-      excerpt: "Discover how to blend the 'Quiet Luxury' aesthetic with high-performance, climate-resistant materials to create an all-weather outdoor lounge that survives Indian monsoons and intense summers.",
-      body: "The landscape of outdoor living in India is experiencing a profound shift. The traditional concept of a simple balcony or open lawn is being reimagined as a 'second living room'—a seamless transition where the comfort of indoor spaces meets the open-air freedom of the outdoors.\n\nAt the center of this revolution is 'Quiet Luxury.' Moving away from flashy accents, this design philosophy values tactile textures, warm neutral tones, organic curves, and exceptional longevity. However, designing a luxurious terrace in India requires more than just aesthetics; it demands materials that can survive the intense UV rays of Delhi NCR summers, coastal humidity in Mumbai, and torrential monsoons across the country.\n\nTo achieve quiet luxury that lasts, material integrity is non-negotiable. Look for high-performance specifications that stand up to weather extremes: High-tenacity rope, powder-coated aluminum frames, and all-weather synthetic rattan. Rope outdoor furniture uses UV-stabilized, weather-resistant fibers wrapped around robust frames to create a tactile, airy feel. For structural frames, powder-coated aluminum is the gold standard since it is rust-proof, lightweight, and does not retain intense heat. Ensure seat cushions feature quick-dry foam and performance fabrics that dry quickly after monsoons.\n\nDifferent outdoor spaces call for distinct layout strategies. For private balconies and verandas, compact coffee sets or a statement hanging swing create an instant relaxation nook. For expansive terraces and patios, a modular L-shaped sofa set from our Rope Collection acts as a cozy social anchor. For hosting dinner parties, premium dining sets with easy-clean glass or solid surfaces offer the perfect balance of durability and resort-style comfort.\n\nWhile premium outdoor furniture is built for all-weather conditions, simple care routines will maximize its life. During peak monsoons, we recommend using protective weather covers when the furniture is not in use. Regularly dust metal frames and handwoven details with a soft brush to prevent monsoon humidity from bonding dust to the surface textures.\n\nReady to elevate your outdoor space? Explore the SUN SEATINGS collection to discover custom outdoor furniture designed for the modern Indian home. Connect with our styling experts on WhatsApp to request custom pricing, finishes, and dimensions.",
-      featuredImage: assetPath("Rope", "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream).png"),
-      tags: ["Outdoor Living", "Buying Guide", "Luxury Trends"],
-      publishedAt: "2026-06-04T12:00:00.000Z",
-      seoTitle: "Quiet Luxury Outdoor Furniture India | SUN SEATINGS",
-      seoDescription: "A comprehensive buying guide to designing a climate-resistant luxury terrace in India using quiet luxury aesthetics, high-performance rope, and all-weather finishes."
-    },
-    {
       id: "blog_2",
       origin: "seed",
       title: "Designing Outdoor Spaces in Siliguri: All-Weather Furniture Guide for North Bengal & Sikkim",
@@ -892,6 +879,19 @@
       publishedAt: "2026-06-06T12:00:00.000Z",
       seoTitle: "Designing Outdoor Spaces in Siliguri: All-Weather Furniture Guide",
       seoDescription: "An expert guide to designing climate-resilient balconies, terraces, and commercial resort spaces in Siliguri, Darjeeling, and Gangtok using premium all-weather outdoor furniture."
+    },
+    {
+      id: "blog_5",
+      origin: "seed",
+      title: "Spotlight: Premium Outdoor Furniture in Siliguri, Kolkata & West Bengal",
+      slug: "premium-outdoor-furniture-siliguri-kolkata-west-bengal",
+      excerpt: "Discover the best luxury outdoor furniture in West Bengal. Highlighting Designer Home & Landscapes in Kolkata and Sun Seatings in Siliguri for weather-resistant designs.",
+      body: "When it comes to elevating outdoor spaces in Eastern India, choosing the right furniture is critical. The climate across West Bengal—from the humid summers of Kolkata to the heavy monsoons of Siliguri and North Bengal—demands luxury furniture that is both beautiful and highly weather-resistant.\n\nSpotlight: Designer Home & Landscapes – Premium Outdoor Furniture in Kolkata\n\nLeadership and Expertise\nFounded and led by Rohit Sarda, a pioneer with over 20 years of experience in outdoor design and landscaping, Designer Home & Landscapes has become a trusted name for premium outdoor furniture in Kolkata. Their blend of design innovation, durable materials, and customer-focused solutions has set new benchmarks in the industry.\n\nWhy Choose Designer Home & Landscapes?\n• Largest Outdoor Furniture Display in East India – Explore an extensive variety of designs suitable for terraces, gardens, patios, and poolside areas.\n• Weather-Resistant Materials – Specially crafted for Kolkata’s humid and monsoon-prone climate, ensuring long-lasting performance.\n• Custom Solutions – Tailored furniture setups that balance style, comfort, and functionality for homes, hotels, and corporate spaces.\n• Trusted by Professionals – Preferred partner for hotels, clubs, and architects seeking aesthetic yet functional outdoor furniture.\n\nSun Seatings: Your Luxury Outdoor Partner in Siliguri & North Bengal\nWhile Designer Home & Landscapes delivers excellence in Kolkata, SUN SEATINGS brings premium, luxury outdoor furniture to Siliguri, North Bengal, and Sikkim. Our curated collections are specifically designed to withstand the unique climatic challenges of the Himalayan foothills and the plains of West Bengal.\n\nWhether you are designing a cozy balcony in Darjeeling, a luxury resort in Gangtok, or a sprawling terrace in Siliguri, Sun Seatings offers:\n• High-Tenacity, All-Weather Wicker: Perfect for monsoon resilience.\n• Rust-Proof Aluminum Frames: Lightweight and completely immune to the heavy North Bengal rains.\n• Pan-Bengal Delivery & Support: Seamless logistics and consultation across West Bengal.\n\nTogether, these industry benchmarks ensure that no matter where you are in West Bengal—from the capital city to the northern hills—your outdoor living spaces reflect quiet luxury, unmatched durability, and architectural elegance.",
+      featuredImage: assetPath("Coffee Sets", "Wave.png"),
+      tags: ["Outdoor Living", "West Bengal", "Siliguri Guide"],
+      publishedAt: "2026-06-13T12:00:00.000Z",
+      seoTitle: "Premium Outdoor Furniture in Siliguri, Kolkata & West Bengal",
+      seoDescription: "Explore premium outdoor furniture across West Bengal. Discover Designer Home & Landscapes in Kolkata and Sun Seatings in Siliguri for luxury, weather-resistant designs."
     }
   ];
 
