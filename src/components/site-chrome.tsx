@@ -257,8 +257,8 @@ export function SiteChrome({ categories, searchIndex, children }: SiteChromeProp
       <main>{children}</main>
 
       <footer className="border-t border-slate-200 bg-[#111827] text-white">
-        <div className="container-shell grid gap-10 py-14 lg:grid-cols-[1.4fr,1fr,1fr,1fr]">
-          <div>
+        <div className="container-shell grid gap-10 py-14 grid-cols-2 lg:grid-cols-[1.4fr,1fr,1fr,1fr]">
+          <div className="col-span-2 lg:col-span-1">
             <p className="font-[var(--font-heading)] text-4xl font-semibold tracking-[0.08em]">
               SUN SEATINGS
             </p>

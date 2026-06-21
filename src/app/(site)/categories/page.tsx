@@ -36,7 +36,7 @@ export default async function CategoriesPage() {
                   background: `linear-gradient(135deg, ${category.accentFrom} 0%, ${category.accentTo} 100%)`
                 }}
               >
-                <div className="relative h-60">
+                <div className="relative h-36 md:h-60">
                   <Image alt={category.name} className="object-contain p-3" fill src={category.bannerImage} unoptimized />
                 </div>
               </div>

@@ -46,10 +46,10 @@ export default async function HomePage() {
                   }}
                 >
                   <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.2),transparent_35%)]" />
-                  <div className="relative flex min-h-[220px] items-center justify-center">
+                  <div className="relative flex min-h-[140px] md:min-h-[220px] items-center justify-center">
                     <Image
                       alt={category.name}
-                      className="h-auto max-h-[180px] w-full object-contain transition duration-500 group-hover:scale-105"
+                      className="h-auto max-h-[110px] md:max-h-[180px] w-full object-contain transition duration-500 group-hover:scale-105"
                       height={280}
                       src={category.bannerImage}
                       unoptimized

@@ -61,7 +61,7 @@ export function ReviewSlider({ items }: ReviewSliderProps) {
                 </div>
               </div>
 
-              <div className="relative min-h-[320px] overflow-hidden rounded-[28px] bg-white">
+              <div className="relative min-h-[220px] sm:min-h-[320px] overflow-hidden rounded-[28px] bg-white">
                 <Image
                   alt={item.name}
                   className="object-contain p-8"
