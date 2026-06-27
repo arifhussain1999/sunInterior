@@ -868,6 +868,19 @@
 
   var blogPosts = [
     {
+      id: "blog_7",
+      origin: "seed",
+      title: "Balcony Furniture Trends in Siliguri (2026): How to Choose the Perfect Luxury Seating for Balconies and Patios",
+      slug: "balcony-furniture-trends-siliguri-buying-guide",
+      excerpt: "Discover the latest luxury balcony furniture trends in Siliguri for 2026. Learn how to select weather-proof, stylish patio seating and swings perfect for North Bengal's climate.",
+      body: "Balconies in Siliguri and neighboring regions like Darjeeling and Gangtok are no longer just utilitarian spaces for drying clothes. In 2026, they have evolved into premium extensions of the home—cozy spots for morning tea, peaceful evening reading corners, and high-style areas for hosting friends. With luxury apartments expanding along Sevoke Road and Matigara, the demand for premium balcony furniture has skyrocketed.\n\nHowever, North Bengal’s unique sub-tropical climate poses challenges: torrential monsoon rains, intense UV exposure in the summer, and high year-round humidity. Standard indoor wooden furniture or cheap plastic chairs will warp, fade, or crack under these conditions. Selecting the perfect luxury balcony seating requires understanding both style trends and weather-proofing technologies.\n\nTrend 1: Compact Balcony Coffee Sets\nFor space-conscious balconies, a premium 3-piece coffee set (2 seats and a compact side table) is the leading design trend. Models featuring UV-resistant hand-woven rope fibers on rust-proof powder-coated aluminum frames are highly popular. The open-weave design allows North Bengal's breeze to flow through freely, drying the seat rapidly after sudden rain showers.\n\nTrend 2: Designer Balcony Swings (Jhulas)\nNo balcony in Siliguri is complete without a statement hanging swing. Woven PE (polyethylene) rattan single or double-seater swings are a classic favorite. They offer resort-style comfort and are extremely durable. Whether suspended from a sturdy metal stand or directly from the ceiling, a luxury swing provides an instant focal point for relaxation.\n\nTrend 3: Weather-Resistant Loungers & Daybeds\nIf you have a spacious balcony or terrace, particularly in township developments like Uttarayon, adding a sunbed or a luxury lounger transforms your space into a private resort sanctuary. Choose models with quick-dry polyurethane foam cushions wrapped in water-repellent, solution-dyed outdoor fabrics that do not fade under direct sunlight.\n\nHow to Choose Balcony Furniture in Siliguri:\n1. Choose Rust-Proof Frames: Always opt for powder-coated aluminum or stainless steel frames. Avoid iron, which will rust within a single monsoon season.\n2. Choose High-Density Polyethylene (HDPE) Wicker over natural cane. Natural cane is highly susceptible to mold in humid environments, whereas PE wicker is completely waterproof and mold-resistant.\n3. Verify Cushion Material: Standard foam traps moisture and mildews. Look for Quick-Dry Foam that allows water to drain through quickly.\n4. Measure the Space: Leave at least 2 feet of walking space around the furniture for comfortable movement.\n\nVisit our Sun Seatings showroom at PCM Tower, Sevoke Road, Siliguri 734001 to explore these trends in person and test our all-weather materials, or chat with our team on WhatsApp for expert recommendations and custom quotes.",
+      featuredImage: assetPath("Coffee Sets", "Qube.png"),
+      tags: ["Balcony Design", "Buying Guide", "Siliguri Guide"],
+      publishedAt: "2026-06-27T12:00:00.000Z",
+      seoTitle: "Balcony Furniture Trends in Siliguri (2026) | Sun Seatings",
+      seoDescription: "Looking for the best balcony furniture in Siliguri? Read our 2026 guide on selecting luxury outdoor swings, coffee sets, and weather-proof patio tables."
+    },
+    {
       id: "blog_2",
       origin: "seed",
       title: "Designing Outdoor Spaces in Siliguri: All-Weather Furniture Guide for North Bengal & Sikkim",
