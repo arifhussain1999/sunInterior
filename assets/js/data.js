@@ -321,7 +321,7 @@
       "Spider HR.png",
       "Saturn.png"
     ],
-    loungers: ["Bean.png", "Melt.png", "Fuse.png", "Curve.png", "Zen.png", "Plush.png"],
+    loungers: ["Bean.png", "Melt.png", "Fuse.png", "Curve.png", "Zen.png", "Plush.png","Bali.png","FIJI.png","meridian.png","RIVIERA.png","SANTORINI.png","SERENITY.png"],
     sunbeds: ["Glade.png", "Oasis.png", "Echo.png", "Bloom.png"],
     umbrellas: ["WW- U3 (Green).png", "WW- U1 (Beige).png", "WW - U1 (Maroon) .png", "WW- U2 (Green).png"],
     "bar-sets": [
