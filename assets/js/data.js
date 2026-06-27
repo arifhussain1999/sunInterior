@@ -152,7 +152,7 @@
       name: "Rope Collection",
       slug: "rope-collection",
       folder: "Rope",
-      bannerImage: assetPath("Rope", "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream).png"),
+      bannerImage: assetPath("Rope", "Drift Sofa.png"),
 
       accentFrom: "#fffdf9",
       accentTo: "#f6efe6",
@@ -306,6 +306,14 @@
       "WW-15 (4 chair + 1 table).png"
     ],
     swings: [
+      "Bloom Swing.png",
+      "Olive Swing.png",
+      "Oslo Swing 1 Seater.png",
+      "Oslo Swing 2 Seater.png",
+      "Palm Swing 1 Seater.png",
+      "Palm Swing 2 Seater.png",
+      "Terra.png",
+      "Willow Swing.png",
       "Spoon.png",
       "Celestial -01.png",
       "Spider.png",
@@ -321,7 +329,7 @@
       "Spider HR.png",
       "Saturn.png"
     ],
-    loungers: ["Bean.png", "Melt.png", "Fuse.png", "Curve.png", "Zen.png", "Plush.png"],
+    loungers: ["Bean.png", "Melt.png", "Fuse.png", "Curve.png", "Zen.png", "Plush.png","Bali.png","FIJI.png","meridian.png","RIVIERA.png","SANTORINI.png","SERENITY.png"],
     sunbeds: ["Glade.png", "Oasis.png", "Echo.png", "Bloom.png"],
     umbrellas: ["WW- U3 (Green).png", "WW- U1 (Beige).png", "WW - U1 (Maroon) .png", "WW- U2 (Green).png"],
     "bar-sets": [
@@ -339,6 +347,34 @@
       "Canvas.png"
     ],
     "rope-collection": [
+      "Dune Set.png",
+      "Knotion Set.png",
+      "Fern Set.png",
+      "Meadow Set.png",
+      "Groove Set.png",
+      "Solace Set.png",
+      "Arbor Set.png",
+      "Marina Set.png",
+      "Ibiza Set.png",
+      "Capri Set.png",
+      "Coast Set.png",
+      "Ivy Set.png",
+      "Oslo Set.png",
+      "Oasis Set.png",
+      "Sienna Set.png",
+      "Tide Set.png",
+      "Vista Set.png",
+      "Breeze Set.png",
+      "Drift Sofa.png",
+      "Mesa Sofa.png",
+      "Oslo Sofa.png",
+      "Sierra Sofa.png",
+      "Sahara Sofa.png",
+      "Solstice Sofa.png",
+      "Azure Sofa.png",
+      "Vista Sofa.png",
+      "Canyon Sofa.png",
+      "Aura Sofa.png",
       "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White).png",
       "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White).png",
       "Outdoor Rope 3-Piece Patio Set (Beige & Off-White).png",
@@ -514,6 +550,34 @@
     "Vatican": 20000,
     "Canvas": 23000,
     // Rope Collection
+    "Dune Set": 24999,
+    "Knotion Set": 26999,
+    "Fern Set": 25999,
+    "Meadow Set": 27999,
+    "Groove Set": 28999,
+    "Solace Set": 29999,
+    "Arbor Set": 31999,
+    "Marina Set": 32999,
+    "Ibiza Set": 34999,
+    "Capri Set": 33999,
+    "Coast Set": 35999,
+    "Ivy Set": 28999,
+    "Oslo Set": 32999,
+    "Oasis Set": 34999,
+    "Sienna Set": 36999,
+    "Tide Set": 45999,
+    "Vista Set": 47999,
+    "Breeze Set": 49999,
+    "Drift Sofa": 89999,
+    "Mesa Sofa": 95999,
+    "Oslo Sofa": 92999,
+    "Sierra Sofa": 109999,
+    "Sahara Sofa": 124999,
+    "Solstice Sofa": 114999,
+    "Azure Sofa": 134999,
+    "Vista Sofa": 119999,
+    "Canyon Sofa": 144999,
+    "Aura Sofa": 154999,
     "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White)": 16916,
     "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White)": 16916,
     "Outdoor Rope 3-Piece Patio Set (Beige & Off-White)": 27058,
@@ -528,6 +592,7 @@
     "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream)": 50399,
     "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey)": 83999,
     "Outdoor L-Shaped Conversation Sofa Set": 54249,
+    "4-Piece Outdoor All Weather Rope Sofa Set": 38000,
     "5-SEATER OUTDOOR ALL-WEATHER ROPE SOFA SET": 195000,
   };
 
@@ -586,6 +651,17 @@
         seatingCapacity = ["2 seater", "4 seater"][index % 2];
       } else if (categorySlug === "umbrellas") {
         seatingCapacity = "Shade unit";
+      } else if (categorySlug === "rope-collection") {
+        var lowerName = displayName.toLowerCase();
+        if (lowerName.indexOf("3-piece") !== -1 || lowerName.indexOf("2-piece") !== -1 || lowerName.indexOf("dining chairs") !== -1 || lowerName.indexOf("dune") !== -1 || lowerName.indexOf("knotion") !== -1 || lowerName.indexOf("fern") !== -1 || lowerName.indexOf("meadow") !== -1 || lowerName.indexOf("groove") !== -1 || lowerName.indexOf("solace") !== -1 || lowerName.indexOf("arbor") !== -1 || lowerName.indexOf("marina") !== -1 || lowerName.indexOf("ibiza") !== -1 || lowerName.indexOf("capri") !== -1 || lowerName.indexOf("coast") !== -1 || lowerName.indexOf("ivy") !== -1 || lowerName.indexOf("oslo set") !== -1 || lowerName.indexOf("oasis") !== -1 || lowerName.indexOf("sienna") !== -1) {
+          seatingCapacity = "2 seater";
+        } else if (lowerName.indexOf("tide") !== -1 || lowerName.indexOf("vista set") !== -1 || lowerName.indexOf("breeze set") !== -1 || lowerName.indexOf("4-piece") !== -1 || lowerName.indexOf("patio set") !== -1) {
+          seatingCapacity = "4 seater";
+        } else if (lowerName.indexOf("l-shaped") !== -1 || lowerName.indexOf("conversation") !== -1 || lowerName.indexOf("canyon") !== -1 || lowerName.indexOf("aura") !== -1 || lowerName.indexOf("5-seater") !== -1) {
+          seatingCapacity = "5 seater";
+        } else {
+          seatingCapacity = "5 seater"; // default for sofa sets
+        }
       } else {
         seatingCapacity = "1 seater";
       }
@@ -956,10 +1032,146 @@
     }
   ];
 
+  var projects = [
+    {
+      id: "project_1",
+      name: "Shree Shyam Sweets, checkpost",
+      slug: "shreeshyam-sweets",
+      location: "Siliguri, West Bengal",
+      type: "Restaurant",
+      description: "Furnished the outdoor dining area of Shree Shyam Sweets at Checkpost with our premium rope weave chairs paired with tempered glass top tables. The elegant grey rope chairs with powder-coated aluminium frames add a contemporary touch to this iconic Siliguri establishment.",
+      furniture: "Rope Weave Dining Chairs & Glass Top Tables",
+      images: [
+        "assets/images/projects/shreeshyam-sweets/1.png"
+      ]
+    },
+    {
+      id: "project_2",
+      name: "Deck Restaurant, PBR Tower",
+      slug: "the-deck",
+      location: "Siliguri, West Bengal",
+      type: "Restaurant",
+      description: "Equipped Deck Restaurant's indoor dining area at PBR Tower with our luxurious deep wine-red leather dining armchairs coupled with custom marble-top dining tables. These robust, comfortably padded seats offer a refined and premium dining experience for patrons.",
+      furniture: "Wine-Red Leather Dining Armchairs & Marble-Top Tables",
+      images: [
+        "assets/images/projects/the-deck/1.png"
+      ]
+    },
+    {
+      id: "project_3",
+      name: "Art cafe, Darjeeling",
+      slug: "art-cafe",
+      location: "Darjeeling, West Bengal",
+      type: "Café",
+      description: "Transformed the outdoor rooftop seating of Art Cafe in Darjeeling with our premium all-weather black wicker chairs and matching glass-top tables, shaded by large white patio umbrellas. Designed to withstand mountain wind and rain while offering scenic comfort.",
+      furniture: "All-Weather Wicker Chairs & Patio Umbrellas",
+      images: [
+        "assets/images/projects/art-cafe/1.png"
+      ]
+    },
+    {
+      id: "project_4",
+      name: "Balaji Jewellers, Siliguri",
+      slug: "balaji-jewellers",
+      location: "Siliguri, West Bengal",
+      type: "Showroom",
+      description: "Delivered elegant, custom-crafted high stools with premium patterned fabric upholstery and black metal legs to Balaji Jewellers showroom in Siliguri. These sophisticated stools perfectly complement the luxurious showroom interiors and display counters.",
+      furniture: "Patterned Fabric High Stools",
+      images: [
+        "assets/images/projects/balaji-jewellers/1.png"
+      ]
+    },
+    {
+      id: "project_5",
+      name: "Home cafe, Salbari",
+      slug: "home-cafe",
+      location: "Salbari, West Bengal",
+      type: "Café",
+      description: "Furnished the balcony counter at Home Cafe in Salbari with our luxury wicker bar stools with white metal frames and plush cream cushions. The organic textures blend beautifully with the surrounding lush green tree canopy.",
+      furniture: "Wicker Bar Stools",
+      images: [
+        "assets/images/projects/home-cafe/1.png"
+      ]
+    },
+    {
+      id: "project_6",
+      name: "Flavours of Punjab, Gangtok",
+      slug: "flavours-of-punjab",
+      location: "Gangtok, Sikkim",
+      type: "Restaurant",
+      description: "Furnished Flavours of Punjab in Gangtok with our deep green velvet cushioned booths and contrasting teal and orange upholstered armchairs. These premium, cozy seats create a warm, inviting, and luxurious dining environment.",
+      furniture: "Velvet Booths & Cushioned Armchairs",
+      images: [
+        "assets/images/projects/flavours-of-punjab/1.png"
+      ]
+    },
+    {
+      id: "project_7",
+      name: "Kore coffee, Pradhan nagar",
+      slug: "kore-coffee",
+      location: "Pradhan Nagar, Siliguri",
+      type: "Café",
+      description: "Supplied custom deep blue velvet upholstered booths and matching curved-back dining chairs for Kore Coffee in Pradhan Nagar. Paired with minimalist white square tables to create a striking, modern aesthetic.",
+      furniture: "Blue Velvet Booths & Accent Chairs",
+      images: [
+        "assets/images/projects/kore-coffee/1.png"
+      ]
+    },
+    {
+      id: "project_8",
+      name: "YKC farm, Bagdogra",
+      slug: "ykc-farm",
+      location: "Bagdogra, West Bengal",
+      type: "Resort / Farmhouse",
+      description: "Furnished the poolside and lawn areas of YKC Farm in Bagdogra with our luxury all-weather wicker daybeds under fairy lights and premium outdoor dining setups. Made with high-tensile wicker and weather-resistant cushions for maximum comfort.",
+      furniture: "Outdoor Wicker Daybeds & Loungers",
+      images: [
+        "assets/images/projects/ykc-farm/1.png"
+      ]
+    },
+    {
+      id: "project_9",
+      name: "Tandooriwala",
+      slug: "tandooriwala",
+      location: "Siliguri, West Bengal",
+      type: "Restaurant",
+      description: "Supplied premium caramel-tan leather dining armchairs to Tandooriwala in Siliguri. These ergonomic, high-density foam cushioned chairs feature vertical ribbing and offer superior durability and comfort for fine-dining patrons.",
+      furniture: "Tan Leather Dining Armchairs",
+      images: [
+        "assets/images/projects/tandooriwala/1.png"
+      ]
+    },
+    {
+      id: "project_10",
+      name: "Hotel Rio",
+      slug: "hotel-rio",
+      location: "Bagdogra, West Bengal",
+      type: "Hotel / Restaurant",
+      description: "Furnished the dining room of Hotel Rio in Bagdogra with our premium, high-back leatherette dining chairs in deep olive grey. These ergonomic, stylishly ribbed chairs perfectly complement the minimalist dark dining tables for a sleek look.",
+      furniture: "Ribbed Leatherette Dining Chairs & Minimalist Dining Tables",
+      images: [
+        "assets/images/projects/hotel-rio/1.jpg"
+      ]
+    },
+    {
+      id: "project_11",
+      name: "Zorko Cafe",
+      slug: "zorko-cafe",
+      location: "Siliguri, West Bengal",
+      type: "Café",
+      description: "Delivered customized premium dining chairs with soft beige suede upholstery and ergonomic curved backs to Zorko Cafe. Styled perfectly to match the cafe's contemporary black and gold interiors and polished dark wooden dining tables.",
+      furniture: "Beige Suede Curved Dining Chairs & Dark Wooden Dining Tables",
+      images: [
+        "assets/images/projects/zorko-cafe/1.jpg"
+      ]
+    }
+  ];
+
   window.WW_DATA = {
     siteConfig: siteConfig,
     categories: categories,
     products: products,
+    projects: projects,
     heroSlides: heroSlides,
     trustPoints: trustPoints,
     testimonials: testimonials,
