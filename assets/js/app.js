@@ -211,6 +211,7 @@
       { href: "index.html", label: "Home", match: "home" },
       { href: "shop.html", label: "Shop", match: "shop" },
       { href: "categories.html", label: "Categories", match: "categories" },
+      { href: "projects.html", label: "Projects", match: "projects" },
       { href: "about.html", label: "About", match: "about" },
       { href: "blog.html", label: "Blog", match: "blog" },
       { href: "contact.html", label: "Contact", match: "contact" }
@@ -1605,6 +1606,119 @@ Crafted for comfort.
     return '<div class="card-stack"><p class="card-copy" style="margin-top:0;">' + escapeHtml(product.description) + "</p><p class=\"card-copy\">" + escapeHtml(product.marketingCopy) + "</p></div>";
   }
 
+  function renderProjectsPage() {
+    var projects = DATA.projects || [];
+    setMeta(
+      "Our Projects | SUN SEATINGS — Delivered to Hotels & Restaurants",
+      "Explore Sun Seatings' completed projects — premium outdoor furniture delivered to top restaurants, hotels, cafés and resorts across India."
+    );
+
+    content.innerHTML =
+      '<section class="projects-hero-section">' +
+      '  <div class="container">' +
+      '    <div class="projects-hero-content">' +
+      '      <p class="eyebrow">Our Projects</p>' +
+      '      <h1 class="section-title projects-hero-title">Furniture delivered. Spaces transformed.</h1>' +
+      '      <p class="section-subtitle projects-hero-subtitle">From fine-dining restaurants to boutique hotels — see how Sun Seatings furniture elevates real commercial spaces across India.</p>' +
+      '    </div>' +
+      '    <div class="projects-stats-row">' +
+      '      <div class="projects-stat">' +
+      '        <span class="projects-stat-value">' + projects.length + '</span>' +
+      '        <span class="projects-stat-label">Projects Delivered</span>' +
+      '      </div>' +
+      '      <div class="projects-stat-divider"></div>' +
+      '      <div class="projects-stat">' +
+      '        <span class="projects-stat-value">100%</span>' +
+      '        <span class="projects-stat-label">Client Satisfaction</span>' +
+      '      </div>' +
+      '      <div class="projects-stat-divider"></div>' +
+      '      <div class="projects-stat">' +
+      '        <span class="projects-stat-value">Pan India</span>' +
+      '        <span class="projects-stat-label">Delivery Network</span>' +
+      '      </div>' +
+      '    </div>' +
+      '  </div>' +
+      '</section>' +
+      '<section class="section projects-grid-section">' +
+      '  <div class="container">' +
+      projects.map(function (project, index) {
+        var isEven = index % 2 === 0;
+        return (
+          '<article class="project-card project-card--' + (isEven ? 'left' : 'right') + '" id="' + escapeHtml(project.slug) + '">' +
+          '  <div class="project-card-gallery">' +
+          '    <div class="project-card-image-main">' +
+          '      <img src="' + project.images[0] + '" alt="' + escapeHtml(project.name) + ' — furniture by Sun Seatings" loading="lazy">' +
+          '      <div class="project-card-badge">' + escapeHtml(project.type) + '</div>' +
+          '    </div>' +
+          (project.images.length > 1 ?
+            '    <div class="project-card-thumbs">' +
+            project.images.slice(1, 4).map(function (img, imgIdx) {
+              return '<div class="project-card-thumb" data-project-thumb="' + project.slug + '" data-img-index="' + (imgIdx + 1) + '"><img src="' + img + '" alt="' + escapeHtml(project.name) + ' view ' + (imgIdx + 2) + '" loading="lazy"></div>';
+            }).join('') +
+            '    </div>'
+            : '') +
+          '  </div>' +
+          '  <div class="project-card-info">' +
+          '    <div class="project-card-header">' +
+          '      <p class="eyebrow project-card-type">' + escapeHtml(project.type) + '</p>' +
+          '      <h2 class="project-card-name">' + escapeHtml(project.name) + '</h2>' +
+          '      <p class="project-card-location">' +
+          '        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>' +
+          '        ' + escapeHtml(project.location) +
+          '      </p>' +
+          '    </div>' +
+          '    <p class="project-card-desc">' + escapeHtml(project.description) + '</p>' +
+          '    <div class="project-card-meta">' +
+          '      <div class="project-card-meta-item">' +
+          '        <span class="project-card-meta-label">Furniture</span>' +
+          '        <span class="project-card-meta-value">' + escapeHtml(project.furniture) + '</span>' +
+          '      </div>' +
+          '    </div>' +
+          '    <div class="project-card-actions">' +
+          '      <a class="btn btn-primary" href="contact.html">Get a Quote for Your Space</a>' +
+          '      <a class="btn btn-outline" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber, "Hi, I saw your project at " + project.name + ". I'd like to discuss furnishing my space.") + '" target="_blank" rel="noreferrer">WhatsApp Us</a>' +
+          '    </div>' +
+          '  </div>' +
+          '</article>'
+        );
+      }).join('') +
+      '  </div>' +
+      '</section>' +
+      '<section class="section projects-cta-section">' +
+      '  <div class="container">' +
+      '    <div class="projects-cta-card">' +
+      '      <div class="projects-cta-glow" aria-hidden="true"></div>' +
+      '      <p class="eyebrow">Partner With Us</p>' +
+      '      <h2 class="section-title projects-cta-title">Furnishing a restaurant, hotel or café?</h2>' +
+      '      <p class="section-subtitle projects-cta-subtitle">We work with architects, interior designers and business owners to deliver bespoke outdoor and semi-outdoor furniture solutions. Get a free consultation and quote.</p>' +
+      '      <div class="stack-actions" style="justify-content:center;">' +
+      '        <a class="btn btn-primary" href="contact.html">Request a Consultation</a>' +
+      '        <a class="btn btn-outline" href="tel:' + DATA.siteConfig.phone + '">Call Us Now</a>' +
+      '      </div>' +
+      '    </div>' +
+      '  </div>' +
+      '</section>';
+
+    // Bind thumbnail clicks to swap main image
+    var thumbs = content.querySelectorAll('[data-project-thumb]');
+    thumbs.forEach(function (thumb) {
+      thumb.addEventListener('click', function () {
+        var projectSlug = this.getAttribute('data-project-thumb');
+        var imgIndex = parseInt(this.getAttribute('data-img-index'), 10);
+        var project = projects.find(function (p) { return p.slug === projectSlug; });
+        if (!project) return;
+        var articleEl = document.getElementById(projectSlug);
+        if (!articleEl) return;
+        var mainImg = articleEl.querySelector('.project-card-image-main img');
+        if (mainImg) {
+          var currentSrc = mainImg.getAttribute('src');
+          mainImg.setAttribute('src', project.images[imgIndex]);
+          this.querySelector('img').setAttribute('src', currentSrc);
+        }
+      });
+    });
+  }
+
   function renderAboutPage() {
     setMeta("About | SUN SEATINGS", "Learn about the SUN SEATINGS brand, luxury positioning and quotation-first customer experience.");
     content.innerHTML =
@@ -1793,6 +1907,8 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
       });
     } else if (page === "categories") {
       renderCategoriesPage();
+    } else if (page === "projects") {
+      renderProjectsPage();
     } else if (page === "category") {
       renderCategoryPage();
     } else if (page === "product") {

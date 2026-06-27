@@ -528,6 +528,7 @@
     "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream)": 50399,
     "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey)": 83999,
     "Outdoor L-Shaped Conversation Sofa Set": 54249,
+    "4-Piece Outdoor All Weather Rope Sofa Set": 38000,
     "5-SEATER OUTDOOR ALL-WEATHER ROPE SOFA SET": 195000,
   };
 
@@ -943,10 +944,62 @@
     }
   ];
 
+  var projects = [
+    {
+      id: "project_1",
+      name: "Shreeshyam Sweets",
+      slug: "shreeshyam-sweets",
+      location: "Siliguri, West Bengal",
+      type: "Restaurant",
+      description: "Furnished the dining area of Shreeshyam Sweets with our premium rope weave chairs paired with tempered glass top tables. The elegant grey rope chairs with powder-coated aluminium frames add a contemporary touch to this iconic Siliguri establishment.",
+      furniture: "Rope Weave Dining Chairs & Glass Top Tables",
+      images: [
+        "assets/images/projects/shreeshyam-sweets/1.jpg"
+      ]
+    },
+    {
+      id: "project_2",
+      name: "The Deck Restaurant",
+      slug: "the-deck",
+      location: "Siliguri, West Bengal",
+      type: "Restaurant",
+      description: "Equipped The Deck Restaurant's indoor/dining area with our luxurious deep wine-red leather dining armchairs coupled with custom marble-top dining tables. These robust, comfortably padded seats offer a refined and premium dining experience for patrons.",
+      furniture: "Wine-Red Leather Dining Armchairs & Marble-Top Tables",
+      images: [
+        "assets/images/projects/the-deck/1.jpg"
+      ]
+    },
+    {
+      id: "project_3",
+      name: "Hotel Rio",
+      slug: "hotel-rio",
+      location: "Bagdogra, West Bengal",
+      type: "Hotel / Restaurant",
+      description: "Furnished the dining room of Hotel Rio in Bagdogra with our premium, high-back leatherette dining chairs in deep olive grey. These ergonomic, stylishly ribbed chairs perfectly complement the minimalist dark dining tables for a sleek look.",
+      furniture: "Ribbed Leatherette Dining Chairs & Minimalist Dining Tables",
+      images: [
+        "assets/images/projects/hotel-rio/1.jpg"
+      ]
+    },
+    {
+      id: "project_4",
+      name: "Zorko Cafe",
+      slug: "zorko-cafe",
+      location: "Siliguri, West Bengal",
+      type: "Café",
+      description: "Delivered customized premium dining chairs with soft beige suede upholstery and ergonomic curved backs to Zorko Cafe. Styled perfectly to match the cafe's contemporary black and gold interiors and polished dark wooden dining tables.",
+      furniture: "Beige Suede Curved Dining Chairs & Dark Wooden Dining Tables",
+      images: [
+        "assets/images/projects/zorko-cafe/1.jpg"
+      ]
+    }
+  ];
+
   window.WW_DATA = {
     siteConfig: siteConfig,
     categories: categories,
     products: products,
+    projects: projects,
     heroSlides: heroSlides,
     trustPoints: trustPoints,
     testimonials: testimonials,
@@ -969,4 +1022,4 @@
     productUrl: productUrl,
     blogPostUrl: blogPostUrl
   };
-})();
+})();
