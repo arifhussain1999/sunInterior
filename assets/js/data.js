@@ -947,30 +947,114 @@
   var projects = [
     {
       id: "project_1",
-      name: "Shreeshyam Sweets",
+      name: "Shree Shyam Sweets, checkpost",
       slug: "shreeshyam-sweets",
       location: "Siliguri, West Bengal",
       type: "Restaurant",
-      description: "Furnished the dining area of Shreeshyam Sweets with our premium rope weave chairs paired with tempered glass top tables. The elegant grey rope chairs with powder-coated aluminium frames add a contemporary touch to this iconic Siliguri establishment.",
+      description: "Furnished the outdoor dining area of Shree Shyam Sweets at Checkpost with our premium rope weave chairs paired with tempered glass top tables. The elegant grey rope chairs with powder-coated aluminium frames add a contemporary touch to this iconic Siliguri establishment.",
       furniture: "Rope Weave Dining Chairs & Glass Top Tables",
       images: [
-        "assets/images/projects/shreeshyam-sweets/1.jpg"
+        "assets/images/projects/shreeshyam-sweets/1.png"
       ]
     },
     {
       id: "project_2",
-      name: "The Deck Restaurant",
+      name: "Deck Restaurant, PBR Tower",
       slug: "the-deck",
       location: "Siliguri, West Bengal",
       type: "Restaurant",
-      description: "Equipped The Deck Restaurant's indoor/dining area with our luxurious deep wine-red leather dining armchairs coupled with custom marble-top dining tables. These robust, comfortably padded seats offer a refined and premium dining experience for patrons.",
+      description: "Equipped Deck Restaurant's indoor dining area at PBR Tower with our luxurious deep wine-red leather dining armchairs coupled with custom marble-top dining tables. These robust, comfortably padded seats offer a refined and premium dining experience for patrons.",
       furniture: "Wine-Red Leather Dining Armchairs & Marble-Top Tables",
       images: [
-        "assets/images/projects/the-deck/1.jpg"
+        "assets/images/projects/the-deck/1.png"
       ]
     },
     {
       id: "project_3",
+      name: "Art cafe, Darjeeling",
+      slug: "art-cafe",
+      location: "Darjeeling, West Bengal",
+      type: "Café",
+      description: "Transformed the outdoor rooftop seating of Art Cafe in Darjeeling with our premium all-weather black wicker chairs and matching glass-top tables, shaded by large white patio umbrellas. Designed to withstand mountain wind and rain while offering scenic comfort.",
+      furniture: "All-Weather Wicker Chairs & Patio Umbrellas",
+      images: [
+        "assets/images/projects/art-cafe/1.png"
+      ]
+    },
+    {
+      id: "project_4",
+      name: "Balaji Jewellers, Siliguri",
+      slug: "balaji-jewellers",
+      location: "Siliguri, West Bengal",
+      type: "Showroom",
+      description: "Delivered elegant, custom-crafted high stools with premium patterned fabric upholstery and black metal legs to Balaji Jewellers showroom in Siliguri. These sophisticated stools perfectly complement the luxurious showroom interiors and display counters.",
+      furniture: "Patterned Fabric High Stools",
+      images: [
+        "assets/images/projects/balaji-jewellers/1.png"
+      ]
+    },
+    {
+      id: "project_5",
+      name: "Home cafe, Salbari",
+      slug: "home-cafe",
+      location: "Salbari, West Bengal",
+      type: "Café",
+      description: "Furnished the balcony counter at Home Cafe in Salbari with our luxury wicker bar stools with white metal frames and plush cream cushions. The organic textures blend beautifully with the surrounding lush green tree canopy.",
+      furniture: "Wicker Bar Stools",
+      images: [
+        "assets/images/projects/home-cafe/1.png"
+      ]
+    },
+    {
+      id: "project_6",
+      name: "Flavours of Punjab, Gangtok",
+      slug: "flavours-of-punjab",
+      location: "Gangtok, Sikkim",
+      type: "Restaurant",
+      description: "Furnished Flavours of Punjab in Gangtok with our deep green velvet cushioned booths and contrasting teal and orange upholstered armchairs. These premium, cozy seats create a warm, inviting, and luxurious dining environment.",
+      furniture: "Velvet Booths & Cushioned Armchairs",
+      images: [
+        "assets/images/projects/flavours-of-punjab/1.png"
+      ]
+    },
+    {
+      id: "project_7",
+      name: "Kore coffee, Pradhan nagar",
+      slug: "kore-coffee",
+      location: "Pradhan Nagar, Siliguri",
+      type: "Café",
+      description: "Supplied custom deep blue velvet upholstered booths and matching curved-back dining chairs for Kore Coffee in Pradhan Nagar. Paired with minimalist white square tables to create a striking, modern aesthetic.",
+      furniture: "Blue Velvet Booths & Accent Chairs",
+      images: [
+        "assets/images/projects/kore-coffee/1.png"
+      ]
+    },
+    {
+      id: "project_8",
+      name: "YKC farm, Bagdogra",
+      slug: "ykc-farm",
+      location: "Bagdogra, West Bengal",
+      type: "Resort / Farmhouse",
+      description: "Furnished the poolside and lawn areas of YKC Farm in Bagdogra with our luxury all-weather wicker daybeds under fairy lights and premium outdoor dining setups. Made with high-tensile wicker and weather-resistant cushions for maximum comfort.",
+      furniture: "Outdoor Wicker Daybeds & Loungers",
+      images: [
+        "assets/images/projects/ykc-farm/1.png"
+      ]
+    },
+    {
+      id: "project_9",
+      name: "Tandooriwala",
+      slug: "tandooriwala",
+      location: "Siliguri, West Bengal",
+      type: "Restaurant",
+      description: "Supplied premium caramel-tan leather dining armchairs to Tandooriwala in Siliguri. These ergonomic, high-density foam cushioned chairs feature vertical ribbing and offer superior durability and comfort for fine-dining patrons.",
+      furniture: "Tan Leather Dining Armchairs",
+      images: [
+        "assets/images/projects/tandooriwala/1.png"
+      ]
+    },
+    {
+      id: "project_10",
       name: "Hotel Rio",
       slug: "hotel-rio",
       location: "Bagdogra, West Bengal",
@@ -982,7 +1066,7 @@
       ]
     },
     {
-      id: "project_4",
+      id: "project_11",
       name: "Zorko Cafe",
       slug: "zorko-cafe",
       location: "Siliguri, West Bengal",
