@@ -306,6 +306,14 @@
       "WW-15 (4 chair + 1 table).png"
     ],
     swings: [
+      "Bloom Swing.png",
+      "Olive Swing.png",
+      "Oslo Swing 1 Seater.png",
+      "Oslo Swing 2 Seater.png",
+      "Palm Swing 1 Seater.png",
+      "Palm Swing 2 Seater.png",
+      "Terra.png",
+      "Willow Swing.png",
       "Spoon.png",
       "Celestial -01.png",
       "Spider.png",
