@@ -13,6 +13,19 @@ import { assetPath, cleanProductName, slugify } from "@/lib/utils";
 
 const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
   {
+    name: "Rope Collection",
+    slug: "rope-collection",
+    folder: "Rope",
+    description:
+      "Premium hand-woven rope collections with modern powder-coated charcoal aluminium frames.",
+    bannerImage: assetPath("Rope", "Drift Sofa.png"),
+    accentFrom: "#78350F",
+    accentTo: "#F59E0B",
+    badge: "Modern Aesthetic",
+    order: 1,
+    heroStat: "Tactile rope weaving"
+  },
+  {
     name: "Outdoor Sofa",
     slug: "outdoor-sofa",
     folder: "Sofa Sets",
@@ -22,7 +35,7 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#2874F0",
     accentTo: "#00C6FF",
     badge: "Top Seller",
-    order: 1,
+    order: 2,
     heroStat: "48-hour quote turnaround"
   },
   {
@@ -35,7 +48,7 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#0F4C81",
     accentTo: "#38BDF8",
     badge: "Luxury Pick",
-    order: 2,
+    order: 3,
     heroStat: "Best for balconies"
   },
   {
@@ -48,7 +61,7 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#1F2937",
     accentTo: "#2874F0",
     badge: "Family Favorite",
-    order: 3,
+    order: 4,
     heroStat: "Resort-ready finishes"
   },
   {
@@ -61,7 +74,7 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#243B53",
     accentTo: "#0EA5E9",
     badge: "Statement Design",
-    order: 4,
+    order: 5,
     heroStat: "Designer silhouettes"
   },
   {
@@ -74,7 +87,7 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#14532D",
     accentTo: "#10B981",
     badge: "Poolside Ready",
-    order: 5,
+    order: 6,
     heroStat: "UV-ready cushions"
   },
   {
@@ -87,7 +100,7 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#92400E",
     accentTo: "#F59E0B",
     badge: "Resort Standard",
-    order: 6,
+    order: 7,
     heroStat: "Hospitality grade"
   },
   {
@@ -100,7 +113,7 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#7C2D12",
     accentTo: "#FB923C",
     badge: "Shade Essential",
-    order: 7,
+    order: 8,
     heroStat: "Wind-stable build"
   },
   {
@@ -113,12 +126,57 @@ const CATEGORY_BLUEPRINTS: Omit<Category, "id">[] = [
     accentFrom: "#312E81",
     accentTo: "#60A5FA",
     badge: "Entertainer Edit",
-    order: 8,
+    order: 9,
     heroStat: "Commercial friendly"
   }
 ];
 
 const PRODUCT_FILES: Record<string, string[]> = {
+  "rope-collection": [
+    "Dune Set.png",
+    "Knotion Set.png",
+    "Fern Set.png",
+    "Meadow Set.png",
+    "Groove Set.png",
+    "Solace Set.png",
+    "Arbor Set.png",
+    "Marina Set.png",
+    "Ibiza Set.png",
+    "Capri Set.png",
+    "Coast Set.png",
+    "Ivy Set.png",
+    "Oslo Set.png",
+    "Oasis Set.png",
+    "Sienna Set.png",
+    "Tide Set.png",
+    "Vista Set.png",
+    "Breeze Set.png",
+    "Drift Sofa.png",
+    "Mesa Sofa.png",
+    "Oslo Sofa.png",
+    "Sierra Sofa.png",
+    "Sahara Sofa.png",
+    "Solstice Sofa.png",
+    "Azure Sofa.png",
+    "Vista Sofa.png",
+    "Canyon Sofa.png",
+    "Aura Sofa.png",
+    "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White).png",
+    "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White).png",
+    "Outdoor Rope 3-Piece Patio Set (Beige & Off-White).png",
+    "Outdoor Rope 3-Piece Patio Set (Beige).png",
+    "Outdoor Rope 3-Piece Patio Set (Grey & Cream).png",
+    "Outdoor 3-Piece Rope Patio Sofa Set (Grey).png",
+    "2-Piece Outdoor Rope Patio Dining Chairs.png",
+    "4-Piece Outdoor Rope Patio Furniture Set with Glass Top Table (Grey & Orange).png",
+    "Outdoor Rope 4-Piece Sofa Set with Wooden Top Round Table.png",
+    "4-Piece Outdoor Rope Sofa Set with Glass Top Table (Grey & Cream).png",
+    "All Weather Patio Rope Sofa Set with Glass Top Coffee Table.png",
+    "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream).png",
+    "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey).png",
+    "Outdoor L-Shaped Conversation Sofa Set.png",
+    "4-Piece Outdoor All Weather Rope Sofa Set.png"
+  ],
   "outdoor-sofa": [
     "Haven.png",
     "Vista.png",
@@ -211,6 +269,12 @@ const CATEGORY_COPY: Record<
     warranty: string;
   }
 > = {
+  "rope-collection": {
+    material: "High-tenacity polyester rope with charcoal aluminium frame",
+    highlights: ["Hand-woven rope detail", "UV-resistant fibers", "Contemporary architectural look"],
+    leadTime: "8-15 business days",
+    warranty: "3 year structural warranty"
+  },
   "outdoor-sofa": {
     material: "All-weather wicker with powder-coated aluminium frame",
     highlights: ["Weather resistant weave", "Deep comfort cushions", "Low-maintenance luxury"],
@@ -262,6 +326,7 @@ const CATEGORY_COPY: Record<
 };
 
 const PRICE_BASE: Record<string, number> = {
+  "rope-collection": 24999,
   "outdoor-sofa": 52999,
   "coffee-sets": 24999,
   "dining-sets": 44999,
@@ -273,6 +338,7 @@ const PRICE_BASE: Record<string, number> = {
 };
 
 const PRICE_STEP: Record<string, number> = {
+  "rope-collection": 1500,
   "outdoor-sofa": 3200,
   "coffee-sets": 1800,
   "dining-sets": 2400,
@@ -306,6 +372,53 @@ export const categories: Category[] = CATEGORY_BLUEPRINTS.map((category, index) 
 
 const categoryMap = new Map(categories.map((category) => [category.slug, category]));
 
+const PRODUCT_PRICES: Record<string, number> = {
+  "Dune Set": 24999,
+  "Knotion Set": 26999,
+  "Fern Set": 25999,
+  "Meadow Set": 27999,
+  "Groove Set": 28999,
+  "Solace Set": 29999,
+  "Arbor Set": 31999,
+  "Marina Set": 32999,
+  "Ibiza Set": 34999,
+  "Capri Set": 33999,
+  "Coast Set": 35999,
+  "Ivy Set": 28999,
+  "Oslo Set": 32999,
+  "Oasis Set": 34999,
+  "Sienna Set": 36999,
+  "Tide Set": 45999,
+  "Vista Set": 47999,
+  "Breeze Set": 49999,
+  "Drift Sofa": 89999,
+  "Mesa Sofa": 95999,
+  "Oslo Sofa": 92999,
+  "Sierra Sofa": 109999,
+  "Sahara Sofa": 124999,
+  "Solstice Sofa": 114999,
+  "Azure Sofa": 134999,
+  "Vista Sofa": 119999,
+  "Canyon Sofa": 144999,
+  "Aura Sofa": 154999,
+  "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White)": 16916,
+  "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White)": 16916,
+  "Outdoor Rope 3-Piece Patio Set (Beige & Off-White)": 27058,
+  "Outdoor Rope 3-Piece Patio Set (Beige)": 28999,
+  "Outdoor Rope 3-Piece Patio Set (Grey & Cream)": 27999,
+  "Outdoor 3-Piece Rope Patio Sofa Set (Grey)": 23916,
+  "2-Piece Outdoor Rope Patio Dining Chairs": 15749,
+  "4-Piece Outdoor Rope Patio Furniture Set with Glass Top Table (Grey & Orange)": 55293,
+  "Outdoor Rope 4-Piece Sofa Set with Wooden Top Round Table": 47058,
+  "4-Piece Outdoor Rope Sofa Set with Glass Top Table (Grey & Cream)": 7587,
+  "All Weather Patio Rope Sofa Set with Glass Top Coffee Table": 52499,
+  "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream)": 50399,
+  "4-Piece Outdoor Rope Sofa Set with HPL Top Coffee Table (Light Grey & Dark Grey)": 83999,
+  "Outdoor L-Shaped Conversation Sofa Set": 54249,
+  "4-Piece Outdoor All Weather Rope Sofa Set": 38000,
+  "5-SEATER OUTDOOR ALL-WEATHER ROPE SOFA SET": 195000
+};
+
 export const products: Product[] = Object.entries(PRODUCT_FILES).flatMap(([categorySlug, files]) => {
   const category = categoryMap.get(categorySlug);
   const copy = CATEGORY_COPY[categorySlug];
@@ -316,7 +429,7 @@ export const products: Product[] = Object.entries(PRODUCT_FILES).flatMap(([categ
 
   return files.map((file, index) => {
     const displayName = cleanProductName(file);
-    const price = PRICE_BASE[categorySlug] + PRICE_STEP[categorySlug] * index;
+    const price = PRODUCT_PRICES[displayName] || (PRICE_BASE[categorySlug] + PRICE_STEP[categorySlug] * index);
     const originalPrice = Math.round(price * 1.22);
     const discountPercentage = Math.round(((originalPrice - price) / originalPrice) * 100);
     const rating = Number((4.3 + (index % 5) * 0.12).toFixed(1));
@@ -334,7 +447,20 @@ export const products: Product[] = Object.entries(PRODUCT_FILES).flatMap(([categ
               ? ["2 seater", "4 seater"][index % 2]
               : categorySlug === "umbrellas"
                 ? "Shade unit"
-                : "1 seater";
+                : categorySlug === "rope-collection"
+                  ? (() => {
+                      const lowerName = displayName.toLowerCase();
+                      if (lowerName.includes("3-piece") || lowerName.includes("2-piece") || lowerName.includes("dining chairs") || lowerName.includes("dune") || lowerName.includes("knotion") || lowerName.includes("fern") || lowerName.includes("meadow") || lowerName.includes("groove") || lowerName.includes("solace") || lowerName.includes("arbor") || lowerName.includes("marina") || lowerName.includes("ibiza") || lowerName.includes("capri") || lowerName.includes("coast") || lowerName.includes("ivy") || lowerName.includes("oslo set") || lowerName.includes("oasis") || lowerName.includes("sienna")) {
+                        return "2 seater";
+                      } else if (lowerName.includes("tide") || lowerName.includes("vista set") || lowerName.includes("breeze set") || lowerName.includes("4-piece") || lowerName.includes("patio set")) {
+                        return "4 seater";
+                      } else if (lowerName.includes("l-shaped") || lowerName.includes("conversation") || lowerName.includes("canyon") || lowerName.includes("aura") || lowerName.includes("5-seater")) {
+                        return "5 seater";
+                      } else {
+                        return "5 seater";
+                      }
+                    })()
+                  : "1 seater";
 
     const availability =
       index % 7 === 0 ? "Limited Stock" : index % 5 === 0 ? "Preorder" : "In Stock";

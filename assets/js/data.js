@@ -152,7 +152,7 @@
       name: "Rope Collection",
       slug: "rope-collection",
       folder: "Rope",
-      bannerImage: assetPath("Rope", "L-Shaped Rope Woven Outdoor Sofa Set (Beige & Cream).png"),
+      bannerImage: assetPath("Rope", "Drift Sofa.png"),
 
       accentFrom: "#fffdf9",
       accentTo: "#f6efe6",
@@ -339,6 +339,34 @@
       "Canvas.png"
     ],
     "rope-collection": [
+      "Dune Set.png",
+      "Knotion Set.png",
+      "Fern Set.png",
+      "Meadow Set.png",
+      "Groove Set.png",
+      "Solace Set.png",
+      "Arbor Set.png",
+      "Marina Set.png",
+      "Ibiza Set.png",
+      "Capri Set.png",
+      "Coast Set.png",
+      "Ivy Set.png",
+      "Oslo Set.png",
+      "Oasis Set.png",
+      "Sienna Set.png",
+      "Tide Set.png",
+      "Vista Set.png",
+      "Breeze Set.png",
+      "Drift Sofa.png",
+      "Mesa Sofa.png",
+      "Oslo Sofa.png",
+      "Sierra Sofa.png",
+      "Sahara Sofa.png",
+      "Solstice Sofa.png",
+      "Azure Sofa.png",
+      "Vista Sofa.png",
+      "Canyon Sofa.png",
+      "Aura Sofa.png",
       "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White).png",
       "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White).png",
       "Outdoor Rope 3-Piece Patio Set (Beige & Off-White).png",
@@ -514,6 +542,34 @@
     "Vatican": 20000,
     "Canvas": 23000,
     // Rope Collection
+    "Dune Set": 24999,
+    "Knotion Set": 26999,
+    "Fern Set": 25999,
+    "Meadow Set": 27999,
+    "Groove Set": 28999,
+    "Solace Set": 29999,
+    "Arbor Set": 31999,
+    "Marina Set": 32999,
+    "Ibiza Set": 34999,
+    "Capri Set": 33999,
+    "Coast Set": 35999,
+    "Ivy Set": 28999,
+    "Oslo Set": 32999,
+    "Oasis Set": 34999,
+    "Sienna Set": 36999,
+    "Tide Set": 45999,
+    "Vista Set": 47999,
+    "Breeze Set": 49999,
+    "Drift Sofa": 89999,
+    "Mesa Sofa": 95999,
+    "Oslo Sofa": 92999,
+    "Sierra Sofa": 109999,
+    "Sahara Sofa": 124999,
+    "Solstice Sofa": 114999,
+    "Azure Sofa": 134999,
+    "Vista Sofa": 119999,
+    "Canyon Sofa": 144999,
+    "Aura Sofa": 154999,
     "Outdoor Rope Patio Set with Glass Top Table (Beige & Off-White)": 16916,
     "3-Piece Rope Patio Set Perfect for Outdoor Entertaining (Grey & White)": 16916,
     "Outdoor Rope 3-Piece Patio Set (Beige & Off-White)": 27058,
@@ -587,6 +643,17 @@
         seatingCapacity = ["2 seater", "4 seater"][index % 2];
       } else if (categorySlug === "umbrellas") {
         seatingCapacity = "Shade unit";
+      } else if (categorySlug === "rope-collection") {
+        var lowerName = displayName.toLowerCase();
+        if (lowerName.indexOf("3-piece") !== -1 || lowerName.indexOf("2-piece") !== -1 || lowerName.indexOf("dining chairs") !== -1 || lowerName.indexOf("dune") !== -1 || lowerName.indexOf("knotion") !== -1 || lowerName.indexOf("fern") !== -1 || lowerName.indexOf("meadow") !== -1 || lowerName.indexOf("groove") !== -1 || lowerName.indexOf("solace") !== -1 || lowerName.indexOf("arbor") !== -1 || lowerName.indexOf("marina") !== -1 || lowerName.indexOf("ibiza") !== -1 || lowerName.indexOf("capri") !== -1 || lowerName.indexOf("coast") !== -1 || lowerName.indexOf("ivy") !== -1 || lowerName.indexOf("oslo set") !== -1 || lowerName.indexOf("oasis") !== -1 || lowerName.indexOf("sienna") !== -1) {
+          seatingCapacity = "2 seater";
+        } else if (lowerName.indexOf("tide") !== -1 || lowerName.indexOf("vista set") !== -1 || lowerName.indexOf("breeze set") !== -1 || lowerName.indexOf("4-piece") !== -1 || lowerName.indexOf("patio set") !== -1) {
+          seatingCapacity = "4 seater";
+        } else if (lowerName.indexOf("l-shaped") !== -1 || lowerName.indexOf("conversation") !== -1 || lowerName.indexOf("canyon") !== -1 || lowerName.indexOf("aura") !== -1 || lowerName.indexOf("5-seater") !== -1) {
+          seatingCapacity = "5 seater";
+        } else {
+          seatingCapacity = "5 seater"; // default for sofa sets
+        }
       } else {
         seatingCapacity = "1 seater";
       }
@@ -1106,4 +1173,4 @@
     productUrl: productUrl,
     blogPostUrl: blogPostUrl
   };
-})();
+})();
