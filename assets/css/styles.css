@@ -4697,3 +4697,114 @@ line-clamp: 3;
   }
 }
 
+/* Video Gallery Page Styles */
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+  gap: 32px;
+  margin-top: 30px;
+}
+
+.video-card {
+  overflow: hidden;
+  background: var(--brand-card);
+  border: 1px solid var(--brand-border);
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+  transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1), box-shadow 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.video-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--brand-shadow-strong);
+}
+
+.video-card-media {
+  position: relative;
+  aspect-ratio: 16/9;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.video-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.video-card:hover .video-card-image {
+  transform: scale(1.05);
+}
+
+.video-card-play-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(40, 32, 26, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.video-card:hover .video-card-play-overlay {
+  background: rgba(40, 32, 26, 0.2);
+}
+
+.video-play-btn {
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #fff;
+  color: var(--brand-navy);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  padding-left: 4px; /* Align play triangle */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), background-color 0.3s ease, color 0.3s ease;
+}
+
+.video-card:hover .video-play-btn {
+  transform: scale(1.15);
+  background: var(--brand-orange);
+  color: #fff;
+}
+
+.video-duration {
+  position: absolute;
+  bottom: 12px;
+  right: 12px;
+  background: rgba(24, 18, 14, 0.85);
+  backdrop-filter: blur(4px);
+  color: #fff;
+  padding: 3px 10px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-card-body {
+  padding: 24px;
+}
+
+.video-modal-content {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.video-modal-content .iframe-container {
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media (max-width: 768px) {
+  .video-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+}

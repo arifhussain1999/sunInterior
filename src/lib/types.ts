@@ -176,3 +176,12 @@ export interface SiteConfig {
   address: string;
   supportHours: string;
 }
+
+export interface Video {
+  id: string;
+  title: string;
+  description: string;
+  category: string;
+  reelId: string;
+  reelUrl: string;
+}

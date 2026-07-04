@@ -212,6 +212,7 @@
       { href: "shop.html", label: "Shop", match: "shop" },
       { href: "categories.html", label: "Categories", match: "categories" },
       { href: "projects.html", label: "Projects", match: "projects" },
+      { href: "video-gallery.html", label: "Video Gallery", match: "video-gallery" },
       { href: "about.html", label: "About", match: "about" },
       { href: "blog.html", label: "Blog", match: "blog" },
       { href: "contact.html", label: "Contact", match: "contact" }
@@ -1880,6 +1881,67 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
       "</section>";
   }
 
+  function openVideoModal(video) {
+    openModal(
+      '<div class="video-modal-content" style="padding:16px;background:#18120d;border-radius:12px;color:#fff;">' +
+      '  <div class="split-row" style="margin-bottom:14px;align-items:center;">' +
+      '    <h3 style="margin:0;font-size:18px;color:#fff;font-weight:600;font-family:\'Inter\',sans-serif;">' + escapeHtml(video.title) + '</h3>' +
+      '    <button class="circle-button" type="button" data-close-modal="true" style="color:#fff;background:rgba(255,255,255,0.08);border:none;font-size:18px;cursor:pointer;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;">✕</button>' +
+      '  </div>' +
+      '  <div style="display:flex;justify-content:center;">' +
+      '    <iframe src="https://www.instagram.com/reel/' + video.reelId + '/embed/" style="width:100%;max-width:400px;height:600px;border:none;border-radius:12px;" allowtransparency="true" allowfullscreen></iframe>' +
+      '  </div>' +
+      '  <p style="margin:14px 0 0;font-size:14px;color:#bcaaa4;line-height:1.6;font-family:\'Inter\',sans-serif;">' + escapeHtml(video.description) + '</p>' +
+      '</div>'
+    );
+  }
+
+  function renderVideoGalleryPage() {
+    var videos = DATA.videos || [];
+
+    setMeta(
+      "Video Gallery | SUN SEATINGS — Furniture Highlights & Styling",
+      "Watch premium outdoor furniture showcases, styling guides, and collections from SUN SEATINGS."
+    );
+
+    var reelEmbeds = videos.map(function (vid) {
+      return (
+        '<div style="background:#fff;border-radius:28px;overflow:hidden;box-shadow:0 20px 40px rgba(0,0,0,0.08);border:1px solid rgba(0,0,0,0.06);width:100%;max-width:360px;aspect-ratio:328/480;min-height:520px;">' +
+        '  <iframe src="https://www.instagram.com/reel/' + vid.reelId + '/embed/" style="width:100%;height:100%;border:none;display:block;" allowtransparency="true" allowfullscreen></iframe>' +
+        '</div>'
+      );
+    }).join("");
+
+    content.innerHTML =
+      '<section class="section" style="padding-bottom:14px;">' +
+      '  <div class="container" style="max-width:600px;margin:0 auto;text-align:center;">' +
+      '    <div class="surface page-hero">' +
+      '      <p class="eyebrow">Video Gallery</p>' +
+      '      <h1 class="section-title" style="font-size:32px;">Visualizing Comfort: Showcases & Styling</h1>' +
+      '      <p class="section-subtitle">Take a closer look at our luxury outdoor collection in the feature showcase reels below.</p>' +
+      '    </div>' +
+      '  </div>' +
+      '</section>' +
+      '<section class="section" style="padding-top:0;">' +
+      '  <div class="container" style="display:flex;flex-wrap:wrap;justify-content:center;gap:30px;margin-top:20px;">' +
+      '    ' + reelEmbeds +
+      '  </div>' +
+      '</section>' +
+      '<section class="section" style="background:#f1f3f6;padding:40px 0;">' +
+      '  <div class="container">' +
+      '    <div class="surface card" style="text-align:center;padding:40px;background:#fff;border-radius:28px;border:1px solid #f0f0f0;">' +
+      '      <p class="eyebrow" style="color:#2874f0;">Custom Bespoke Designs</p>' +
+      '      <h2 class="section-title" style="font-size:28px;margin-top:10px;">Looking for something custom?</h2>' +
+      '      <p class="section-subtitle" style="max-width:600px;margin:12px auto;">Our designers can assist you with custom sizes, color configurations, and layouts to fit your terrace, balcony, cafe, or resort.</p>' +
+      '      <div class="stack-actions" style="justify-content:center;margin-top:20px;">' +
+      '        <a class="btn btn-green" href="' + DATA.buildWhatsAppLink(DATA.siteConfig.whatsappNumber, "Hi, I watched your video gallery. I'd like to discuss custom outdoor furniture options.") + '" target="_blank" rel="noreferrer">Chat on WhatsApp</a>' +
+      '        <a class="btn btn-outline" href="contact.html">Send an Enquiry</a>' +
+      '      </div>' +
+      '    </div>' +
+      '  </div>' +
+      '</section>';
+  }
+
   function renderNotFound(message) {
     setMeta("Not Found | SUN SEATINGS", "The requested content could not be found.");
     content.innerHTML =
@@ -1909,6 +1971,8 @@ At Sun Seatings, we focus on quality you can rely on, designs that feel current,
       renderCategoriesPage();
     } else if (page === "projects") {
       renderProjectsPage();
+    } else if (page === "video-gallery") {
+      renderVideoGalleryPage();
     } else if (page === "category") {
       renderCategoryPage();
     } else if (page === "product") {

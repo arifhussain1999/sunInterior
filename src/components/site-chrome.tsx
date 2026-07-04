@@ -38,6 +38,7 @@ const navLinks = [
   { href: "/", label: "Home" },
   { href: "/shop", label: "Shop" },
   { href: "/categories", label: "Categories" },
+  { href: "/video-gallery", label: "Video Gallery" },
   { href: "/about", label: "About" },
   { href: "/contact", label: "Contact" }
 ];

@@ -329,7 +329,7 @@
       "Spider HR.png",
       "Saturn.png"
     ],
-    loungers: ["Bean.png", "Melt.png", "Fuse.png", "Curve.png", "Zen.png", "Plush.png","Bali.png","FIJI.png","meridian.png","RIVIERA.png","SANTORINI.png","SERENITY.png"],
+    loungers: ["Bean.png", "Melt.png", "Fuse.png", "Curve.png", "Zen.png", "Plush.png", "Bali.png", "FIJI.png", "meridian.png", "RIVIERA.png", "SANTORINI.png", "SERENITY.png"],
     sunbeds: ["Glade.png", "Oasis.png", "Echo.png", "Bloom.png"],
     umbrellas: ["WW- U3 (Green).png", "WW- U1 (Beige).png", "WW - U1 (Maroon) .png", "WW- U2 (Green).png"],
     "bar-sets": [
@@ -1180,11 +1180,87 @@
     }
   ];
 
+  var videos = [
+    {
+      id: "vid_1",
+      title: "Exclusive Outdoor Furniture Showcase",
+      description: "Explore our premium hand-woven all-weather outdoor collection live in action.",
+      category: "showroom",
+      reelId: "DZHh0Xjxs6h",
+      reelUrl: "https://www.instagram.com/reel/DZHh0Xjxs6h/"
+    },
+    {
+      id: "vid_2",
+      title: "Luxury Patio Styling & Setup Guide",
+      description: "See how we style and set up premium outdoor dining and sofa sets for luxury terraces.",
+      category: "showroom",
+      reelId: "DaACqrPRfHP",
+      reelUrl: "https://www.instagram.com/reel/DaACqrPRfHP/"
+    },
+    {
+      id: "vid_3",
+      title: "Luxury Outdoor Sofa Set",
+      description: "Experience premium comfort with our all-weather hand-woven outdoor sofa sets.",
+      category: "showroom",
+      reelId: "DZrXVIERF-J",
+      reelUrl: "https://www.instagram.com/reel/DZrXVIERF-J/"
+    },
+    {
+      id: "vid_4",
+      title: "Premium Patio Seating",
+      description: "Styling inspiration for spacious terraces and balconies featuring custom designer chairs.",
+      category: "showroom",
+      reelId: "DZZWgLaRACX",
+      reelUrl: "https://www.instagram.com/reel/DZZWgLaRACX/"
+    },
+    {
+      id: "vid_5",
+      title: "Outdoor Dining Configurations",
+      description: "Explore our modern resort-style dining sets made from rust-resistant aluminium.",
+      category: "showroom",
+      reelId: "DZUsRhhBApg",
+      reelUrl: "https://www.instagram.com/reel/DZUsRhhBApg/"
+    },
+    {
+      id: "vid_6",
+      title: "Hanging Swings Comfort Showcase",
+      description: "Relax in our statement wicker swings designed to elevate any outdoor corner.",
+      category: "showroom",
+      reelId: "DYgcNSWhnCk",
+      reelUrl: "https://www.instagram.com/reel/DYgcNSWhnCk/"
+    },
+    {
+      id: "vid_7",
+      title: "Wicker and Weave Craftsmanship",
+      description: "A close look at the detailed weaving patterns and weather-resistant finishes of our furniture.",
+      category: "showroom",
+      reelId: "DYOM-c3zv3j",
+      reelUrl: "https://www.instagram.com/reel/DYOM-c3zv3j/"
+    },
+    {
+      id: "vid_8",
+      title: "Poolside Loungers Setup",
+      description: "Transform your pool deck or rooftop with our UV-ready and quick-dry cushions.",
+      category: "showroom",
+      reelId: "DXbS7JvkTyA",
+      reelUrl: "https://www.instagram.com/reel/DXbS7JvkTyA/"
+    },
+    {
+      id: "vid_9",
+      title: "Luxury Balcony Styling Guide",
+      description: "Compact design inspiration to create a cozy and premium balcony retreat.",
+      category: "showroom",
+      reelId: "DWTHD3aEQeO",
+      reelUrl: "https://www.instagram.com/reel/DWTHD3aEQeO/"
+    }
+  ];
+
   window.WW_DATA = {
     siteConfig: siteConfig,
     categories: categories,
     products: products,
     projects: projects,
+    videos: videos,
     heroSlides: heroSlides,
     trustPoints: trustPoints,
     testimonials: testimonials,

@@ -5,7 +5,7 @@ import { categories, products, seedBlogPosts } from "@/data/catalog";
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || "https://www.sunseatings.com";
 
-  const staticRoutes = ["", "/shop", "/categories", "/about", "/contact", "/catalog", "/blog", "/admin/login"];
+  const staticRoutes = ["", "/shop", "/categories", "/video-gallery", "/about", "/contact", "/catalog", "/blog", "/admin/login"];
 
   return [
     ...staticRoutes.map((route) => ({
