@@ -138,6 +138,36 @@ data.blogPosts.forEach(post => {
     `$1${canonicalLink}`
   );
 
+  // Add JSON-LD schema markup for BlogPosting just before </head>
+  const schemaMarkup = `
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": ${JSON.stringify(post.title)},
+    "description": ${JSON.stringify(post.excerpt)},
+    "image": ${JSON.stringify("https://www.sunseatings.com/" + post.featuredImage)},
+    "author": {
+      "@type": "Organization",
+      "name": "Sun Seatings"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Sun Seatings",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.sunseatings.com/assets/favicon2.png"
+      }
+    },
+    "datePublished": ${JSON.stringify(post.publishedAt.split('T')[0])},
+    "mainEntityOfPage": ${JSON.stringify("https://www.sunseatings.com/" + post.slug + ".html")},
+    "keywords": ${JSON.stringify(post.tags.join(', '))}
+  }
+  </script>
+  `;
+
+  postHtml = postHtml.replace('</head>', schemaMarkup + '\n</head>');
+
   // Save the compiled page
   const fileName = `${post.slug}.html`;
   const outputPath = path.join(__dirname, fileName);
