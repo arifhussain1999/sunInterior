@@ -928,6 +928,13 @@ button {
   background-size: cover;
 }
 
+@media (min-width: 1181px) {
+  .hero-slide[data-hero-slide="1"] {
+    background-position: center bottom;
+  }
+}
+
+
 .hero-slide::before {
   content: "";
   position: absolute;
