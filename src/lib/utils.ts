@@ -40,7 +40,7 @@ export function buildPhoneLink(phone: string) {
 }
 
 export function cleanProductName(fileName: string) {
-  return fileName
+  const cleaned = fileName
     .replace(/\.[^.]+$/, "")
     .replace(/\bw:o\b/gi, "without arm")
     .replace(/\bw arm\b/gi, "with arm")
@@ -48,6 +48,10 @@ export function cleanProductName(fileName: string) {
     .replace(/_/g, " ")
     .replace(/\s+/g, " ")
     .trim();
+  if (cleaned.length > 0) {
+    return cleaned.charAt(0).toUpperCase() + cleaned.slice(1).toLowerCase();
+  }
+  return cleaned;
 }
 
 export function createId(prefix: string) {

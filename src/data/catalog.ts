@@ -420,6 +420,11 @@ const PRODUCT_PRICES: Record<string, number> = {
   "5-SEATER OUTDOOR ALL-WEATHER ROPE SOFA SET": 195000
 };
 
+const LOWERCASE_PRODUCT_PRICES = Object.keys(PRODUCT_PRICES).reduce((acc, key) => {
+  acc[key.toLowerCase()] = PRODUCT_PRICES[key];
+  return acc;
+}, {} as Record<string, number>);
+
 export const products: Product[] = Object.entries(PRODUCT_FILES).flatMap(([categorySlug, files]) => {
   const category = categoryMap.get(categorySlug);
   const copy = CATEGORY_COPY[categorySlug];
@@ -430,7 +435,7 @@ export const products: Product[] = Object.entries(PRODUCT_FILES).flatMap(([categ
 
   return files.map((file, index) => {
     const displayName = cleanProductName(file);
-    const price = PRODUCT_PRICES[displayName] || (PRICE_BASE[categorySlug] + PRICE_STEP[categorySlug] * index);
+    const price = LOWERCASE_PRODUCT_PRICES[displayName.toLowerCase()] || (PRICE_BASE[categorySlug] + PRICE_STEP[categorySlug] * index);
     const originalPrice = Math.round(price * 1.22);
     const discountPercentage = Math.round(((originalPrice - price) / originalPrice) * 100);
     const rating = Number((4.3 + (index % 5) * 0.12).toFixed(1));

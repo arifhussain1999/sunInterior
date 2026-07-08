@@ -13,7 +13,7 @@
   }
 
   function cleanProductName(fileName) {
-    return String(fileName)
+    var cleaned = String(fileName)
       .replace(/\.[^.]+$/, "")
       .replace(/\bw:o\b/gi, "without arm")
       .replace(/\bw arm\b/gi, "with arm")
@@ -21,6 +21,10 @@
       .replace(/_/g, " ")
       .replace(/\s+/g, " ")
       .trim();
+    if (cleaned.length > 0) {
+      return cleaned.charAt(0).toUpperCase() + cleaned.slice(1).toLowerCase();
+    }
+    return cleaned;
   }
 
   function uniqueValues(values) {
@@ -501,6 +505,14 @@
     "WW-15 (4 chair + 1 table)": 36000,
 
     // Swings
+    "Bloom Swing": 25000,
+    "Olive Swing": 19000,
+    "Oslo Swing 1 Seater": 10000,
+    "Oslo Swing 2 Seater": 20000,
+    "Palm Swing 1 Seater": 15000,
+    "Palm Swing 2 Seater": 30000,
+    "Terra": 16000,
+    "Willow Swing": 19000,
     "Spoon": 15000,
     "Celestial -01": 24000,
     "Spider": 14000,
@@ -523,6 +535,12 @@
     "Curve": 19000,
     "Zen": 24000,
     "Plush": 29000,
+    "Bali": 22000,
+    "FIJI": 18000,
+    "meridian": 30000,
+    "RIVIERA": 16000,
+    "SANTORINI": 20000,
+    "SERENITY": 14000,
 
     // Sunbeds
     "Glade": 46000,
@@ -619,6 +637,11 @@
     categoryMap[category.slug] = category;
   });
 
+  var lowercasePrices = {};
+  Object.keys(PRODUCT_PRICES).forEach(function (key) {
+    lowercasePrices[key.toLowerCase()] = PRODUCT_PRICES[key];
+  });
+
   var products = [];
   Object.keys(productFiles).forEach(function (categorySlug) {
     var category = categoryMap[categorySlug];
@@ -633,7 +656,7 @@
 
       // LOOKUP PRICE FROM THE SIMPLE LIST
       // Fallback logic if a new name is added but not in the price list
-      var price = PRODUCT_PRICES[displayName] || 0;
+      var price = lowercasePrices[displayName.toLowerCase()] || 0;
 
       var originalPrice = Math.round(price * 1.22);
       var discountPercentage = Math.round(((originalPrice - price) / originalPrice) * 100);
