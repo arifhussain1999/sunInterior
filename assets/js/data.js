@@ -967,6 +967,19 @@
 
   var blogPosts = [
     {
+      id: "blog_10",
+      origin: "seed",
+      title: "Sustainable & Eco-Friendly Outdoor Furniture Trends 2026 in Siliguri",
+      slug: "sustainable-eco-friendly-outdoor-furniture-trends-siliguri",
+      excerpt: "Explore the rising trend of sustainable, eco-friendly outdoor furniture in Siliguri and West Bengal. Discover how recyclable HDPE wicker and eco-conscious manufacturing are shaping 2026.",
+      body: "Sustainability is no longer just a buzzword; it is a fundamental shift in how we design our living spaces. As homeowners in Siliguri, Darjeeling, and across North Bengal become more environmentally conscious, the demand for sustainable, eco-friendly outdoor furniture is skyrocketing in 2026. Buyers are looking for pieces that not only withstand the heavy monsoons but also leave a minimal environmental footprint.\n\nTrend 1: Recyclable HDPE Wicker\nHigh-Density Polyethylene (HDPE) is leading the charge in sustainable outdoor materials. Unlike cheap PVC plastics that degrade and release toxins, premium HDPE wicker is 100% recyclable. When an HDPE chair reaches the end of its decades-long lifespan, the material can be repurposed without ending up in a landfill. Moreover, the manufacturing process of HDPE is cleaner, emitting fewer greenhouse gases compared to traditional plastics.\n\nTrend 2: Ethically Sourced and Durable Aluminum\nAluminum frames are the backbone of luxury outdoor furniture in West Bengal due to their rust-proof nature. In 2026, the focus is on recycled aluminum. Producing recycled aluminum requires up to 90% less energy than extracting new aluminum from bauxite ore. The result is a lightweight, incredibly durable frame that is both eco-friendly and perfectly suited for Siliguri's humid climate.\n\nTrend 3: Solution-Dyed Eco Fabrics\nThe textiles used in premium outdoor cushions are also getting an eco-upgrade. Solution-dyed acrylics, which lock color into the fiber before it is spun, are not only highly fade-resistant under the intense summer sun but also require significantly less water during the dyeing process compared to traditional methods.\n\nTrend 4: Timeless Design Over Fast Furniture\nPerhaps the most impactful sustainable trend is the move away from 'fast furniture'. Consumers are investing in high-quality, timeless pieces—like our luxury hanging swings and modular rope sofa sets—that are built to last for generations. By reducing the frequency of replacement, the overall environmental impact is drastically lowered.\n\nAt Sun Seatings, we are committed to offering premium outdoor furniture that aligns with eco-conscious values without compromising on luxury, aesthetics, or durability. Visit our showroom at PCM Tower, Sevoke Road, Siliguri to explore our sustainable collections for 2026.",
+      featuredImage: assetPath("Dining Sets", "WW-44 (4 chair + 1 table).png"),
+      tags: ["Sustainability", "Trends 2026", "Siliguri Guide"],
+      publishedAt: "2026-07-18T12:00:00.000Z",
+      seoTitle: "Eco-Friendly Outdoor Furniture Trends 2026 Siliguri | Sun Seatings",
+      seoDescription: "Discover 2026 trends in sustainable, eco-friendly outdoor furniture in Siliguri. Learn about recyclable HDPE wicker and eco-conscious luxury patio designs."
+    },
+    {
       id: "blog_9",
       origin: "seed",
       title: "Smart Home Outdoor Furniture Trends 2026: Elevate Your Patio in Siliguri",
