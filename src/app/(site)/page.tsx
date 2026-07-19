@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { FeaturedCarousel } from "@/components/featured-carousel";
 import { HeroCarousel } from "@/components/hero-carousel";
+import { HomeVideoReels } from "@/components/home-video-reels";
 import { ReviewSlider } from "@/components/review-slider";
 import { categories as seedCategories, heroSlides, instagramShots, siteConfig, testimonials, trustPoints, localFaqs } from "@/data/catalog";
 import { ArrowRightIcon, ShieldIcon, SparklesIcon, TruckIcon, WhatsappIcon } from "@/components/icons";
@@ -20,6 +21,20 @@ export default async function HomePage() {
   return (
     <>
       <HeroCarousel slides={heroSlides} />
+
+      <section className="section-space pt-4 pb-0">
+        <div className="container-shell">
+          <div className="mb-6">
+            <p className="text-xs font-bold uppercase tracking-[0.35em] text-[#2874F0]">
+              Watch Our Reels
+            </p>
+            <h2 className="mt-3 font-[var(--font-heading)] text-4xl font-semibold text-[#1f2937] sm:text-5xl">
+              See our furniture come alive in short, inspiring videos.
+            </h2>
+          </div>
+          <HomeVideoReels />
+        </div>
+      </section>
 
       <section className="section-space pt-4">
         <div className="container-shell">

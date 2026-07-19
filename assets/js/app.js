@@ -842,6 +842,29 @@ Crafted for comfort.
       "    </div>" +
       "  </div>" +
       "</section>" +
+      /* ── Video Reels Section (before Category Grid) ── */
+      '<section class="section">' +
+      '  <div class="container">' +
+      '    <div class="section-heading"><p class="eyebrow">Watch Our Reels</p><h2 class="section-title">See our furniture come alive in short, inspiring videos.</h2></div>' +
+      '    <div class="home-reels-wrap">' +
+      '      <button class="home-reels-arrow home-reels-arrow--left" aria-label="Scroll left" onclick="document.getElementById(\'home-reels-track\').scrollBy({left:-300,behavior:\'smooth\'})">' +
+      '        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M15 19l-7-7 7-7"/></svg>' +
+      '      </button>' +
+      '      <div class="home-reels-track" id="home-reels-track">' +
+      (DATA.videos || []).map(function(vid) {
+        return '<div class="home-reel-card">' +
+          '<iframe src="https://www.instagram.com/reel/' + vid.reelId + '/embed/?autoplay=1&mute=1" class="home-reel-iframe" allowfullscreen scrolling="no" loading="lazy" allow="autoplay; encrypted-media"></iframe>' +
+          '<div class="home-reel-gradient"></div>' +
+          '<div class="home-reel-title">' + escapeHtml(vid.title) + '</div>' +
+        '</div>';
+      }).join("") +
+      '      </div>' +
+      '      <button class="home-reels-arrow home-reels-arrow--right" aria-label="Scroll right" onclick="document.getElementById(\'home-reels-track\').scrollBy({left:300,behavior:\'smooth\'})">' +
+      '        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg>' +
+      '      </button>' +
+      '    </div>' +
+      '  </div>' +
+      '</section>' +
       '<section class="section">' +
       '  <div class="container">' +
       '    <div class="section-heading"><p class="eyebrow">Category Grid</p><h2 class="section-title">Find the perfect pieces for your space.</h2></div>' +
