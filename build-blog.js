@@ -133,9 +133,27 @@ data.blogPosts.forEach(post => {
 
   // Insert Canonical Link right after head tag or description tag
   const canonicalLink = `\n  <link rel="canonical" href="https://www.sunseatings.com/${post.slug}.html">`;
+  
+  // God-level SEO tags (Open Graph & Twitter)
+  const ogTags = `
+  <!-- Open Graph / Social Media -->
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="${escapeHtml(seoTitle)}">
+  <meta property="og:description" content="${escapeHtml(seoDescription)}">
+  <meta property="og:image" content="https://www.sunseatings.com/${post.featuredImage}">
+  <meta property="og:url" content="https://www.sunseatings.com/${post.slug}.html">
+  <meta property="article:published_time" content="${post.publishedAt}">
+  <meta property="article:author" content="Sun Seatings">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="${escapeHtml(seoTitle)}">
+  <meta property="twitter:description" content="${escapeHtml(seoDescription)}">
+  <meta property="twitter:image" content="https://www.sunseatings.com/${post.featuredImage}">`;
+
   postHtml = postHtml.replace(
     /(<meta name="description" content=".*?">)/,
-    `$1${canonicalLink}`
+    `$1${canonicalLink}${ogTags}`
   );
 
   // Add JSON-LD schema markup for BlogPosting just before </head>
